@@ -1,0 +1,254 @@
+{
+  "revision_date": "2026-09-12",
+  "export": "Current consumed tables only; original cell values preserved in CSV.",
+  "tables": [
+    {
+      "file": "data/Current_Survival_Tanks.csv",
+      "source_workbook": "Source_Data_Revised.xlsx",
+      "source_sheet": "Current_Survival_Tanks",
+      "rows_including_headers": 19,
+      "columns": 9,
+      "sha256": "81727a2eb2627c533fe676c21f9ea22ea71011e53a22deeba3bd7804a645c0bf"
+    },
+    {
+      "file": "data/Current_Survival_Contrasts.csv",
+      "source_workbook": "Source_Data_Revised.xlsx",
+      "source_sheet": "Current_Survival_Contrasts",
+      "rows_including_headers": 3,
+      "columns": 9,
+      "sha256": "fa376bc923cd9aee39dad20c2949979cbfc8bccaadd267b70ed72cd273ef777c"
+    },
+    {
+      "file": "data/Current_Flow_Source.csv",
+      "source_workbook": "Source_Data_Revised.xlsx",
+      "source_sheet": "Current_Flow_Source",
+      "rows_including_headers": 151,
+      "columns": 16,
+      "sha256": "32f4caf18fd77b9f679e6831b3b6fffdc4aa373ef6cf96fe7dea6b346e238a9f"
+    },
+    {
+      "file": "data/Current_Flow_Values.csv",
+      "source_workbook": "Source_Data_Revised.xlsx",
+      "source_sheet": "Current_Flow_Values",
+      "rows_including_headers": 601,
+      "columns": 7,
+      "sha256": "0f7954504c783f95106856a5cdfc4bf2fbaa188421c3edab0f1bf4a16859c843"
+    },
+    {
+      "file": "data/Current_Flow_Summary.csv",
+      "source_workbook": "Source_Data_Revised.xlsx",
+      "source_sheet": "Current_Flow_Summary",
+      "rows_including_headers": 121,
+      "columns": 9,
+      "sha256": "4d55df7a98f3805aa07e7a3f75a9afc123473542e28b868edd0eb0e35ce2738c"
+    },
+    {
+      "file": "data/Current_RTqPCR_Observations.csv",
+      "source_workbook": "Source_Data_Revised.xlsx",
+      "source_sheet": "Current_RTqPCR_Observations",
+      "rows_including_headers": 351,
+      "columns": 16,
+      "sha256": "186cbd71a73e9cacfd5f9ed0639d0f89ccfa1c03a16ed352d0877eceb83536df"
+    },
+    {
+      "file": "data/Current_Cardiac_Means.csv",
+      "source_workbook": "Source_Data_Revised.xlsx",
+      "source_sheet": "Current_Cardiac_Means",
+      "rows_including_headers": 7,
+      "columns": 5,
+      "sha256": "65ddf110f8b83b25719b450a13575fc2ea321ce609975d3f95ec69a7072650a7"
+    },
+    {
+      "file": "data/Current_PRI_H_Descriptive.csv",
+      "source_workbook": "Source_Data_Revised.xlsx",
+      "source_sheet": "Current_PRI_H_Descriptive",
+      "rows_including_headers": 7,
+      "columns": 7,
+      "sha256": "020d92cf322dd1d3fe3cca0ea866b7e501b01403ce3f3986c7f46b898caf506d"
+    },
+    {
+      "file": "data/WGCNA_1e9_group_means.csv",
+      "source_workbook": "Source_Data_Revised.xlsx",
+      "source_sheet": "WGCNA_1e9_group_means",
+      "rows_including_headers": 7,
+      "columns": 87,
+      "sha256": "2adf307b96723a14439180a91282dfd23a80a9e62b11cd1ee24a575d7788da71"
+    },
+    {
+      "file": "data/WGCNA_1e9_all_tests.csv",
+      "source_workbook": "Source_Data_Revised.xlsx",
+      "source_sheet": "WGCNA_1e9_all_tests",
+      "rows_including_headers": 247,
+      "columns": 8,
+      "sha256": "59b230fb77c471ba7174368b713c3a095ea0a0975cab56ab6a1cf889dc0c3eee"
+    },
+    {
+      "file": "data/WGCNA_1e9_plum_LOO.csv",
+      "source_workbook": "Source_Data_Revised.xlsx",
+      "source_sheet": "WGCNA_1e9_plum_LOO",
+      "rows_including_headers": 7,
+      "columns": 3,
+      "sha256": "692957d7dc3802bcb6455d4bd5b00172992ecb4024d6951565df71f308fc9112"
+    },
+    {
+      "file": "data/PCA_recomputed.csv",
+      "source_workbook": "Source_Data_Revised.xlsx",
+      "source_sheet": "PCA_recomputed",
+      "rows_including_headers": 37,
+      "columns": 6,
+      "sha256": "04c65c8e849c6fd22f0117c0a9b3a824017d037585bbf4b92ebd0feddb3a6512"
+    },
+    {
+      "file": "data/OD_mode_summary.csv",
+      "source_workbook": "Source_Data_Revised.xlsx",
+      "source_sheet": "OD_mode_summary",
+      "rows_including_headers": 11,
+      "columns": 4,
+      "sha256": "61e3b27ee750927174b04bec90a2ccdeef9f8cdee58a72481a9d1c0e2373bd53"
+    },
+    {
+      "file": "data/OD_classification.csv",
+      "source_workbook": "Source_Data_Revised.xlsx",
+      "source_sheet": "OD_classification",
+      "rows_including_headers": 61265,
+      "columns": 17,
+      "sha256": "32b956e72ef02398a54aa24f3fcd81ebf94a971835136eb599a752cb54fd0958"
+    },
+    {
+      "file": "data/Supp_Fig_1B_GO_1yr.csv",
+      "source_workbook": "Source_Data_Revised.xlsx",
+      "source_sheet": "Supp_Fig_1B_GO_1yr",
+      "rows_including_headers": 257,
+      "columns": 9,
+      "sha256": "01760a2295ac2004f9aa97dfc444d17f77573283d4aee837f5df5939a694bbf5"
+    },
+    {
+      "file": "data/Supp_Fig_1B_GO_2yr.csv",
+      "source_workbook": "Source_Data_Revised.xlsx",
+      "source_sheet": "Supp_Fig_1B_GO_2yr",
+      "rows_including_headers": 308,
+      "columns": 9,
+      "sha256": "f90c8f102753f42558306dbd755bb98b431a13b01c7b17159256d949b82efe8c"
+    },
+    {
+      "file": "data/WGCNA_library_eigengenes.csv",
+      "source_workbook": "Source_Data_Revised.xlsx",
+      "source_sheet": "WGCNA_library_eigengenes",
+      "rows_including_headers": 37,
+      "columns": 88,
+      "sha256": "d262570fc68f23cd2aea1efaa63edc6607adbd6a15532b771a5c26f3e71ffe7e"
+    },
+    {
+      "file": "data/Plum_hub_expression.csv",
+      "source_workbook": "Source_Data_Revised.xlsx",
+      "source_sheet": "Plum_hub_expression",
+      "rows_including_headers": 11,
+      "columns": 38,
+      "sha256": "835b35435d71bc4b2bd81ac58434981ac19c1bc5c394af87c33480e18593b36b"
+    },
+    {
+      "file": "data/OD_module_enrichment_1yr.csv",
+      "source_workbook": "Source_Data_Revised.xlsx",
+      "source_sheet": "OD_module_enrichment_1yr",
+      "rows_including_headers": 83,
+      "columns": 7,
+      "sha256": "fb2b2f03d5c682f1e354e09b361eda194cec82dd8aaa38dc7d6f78c847a1cd33"
+    },
+    {
+      "file": "data/OD_module_enrichment_2yr.csv",
+      "source_workbook": "Source_Data_Revised.xlsx",
+      "source_sheet": "OD_module_enrichment_2yr",
+      "rows_including_headers": 83,
+      "columns": 7,
+      "sha256": "074a755cbb8a4f99dcc232468d58624245be57da4eb12c4ca86c86c9074cef1d"
+    },
+    {
+      "file": "data/DTU_UBOX5_libraries.csv",
+      "source_workbook": "Source_Data_Revised.xlsx",
+      "source_sheet": "DTU_UBOX5_libraries",
+      "rows_including_headers": 19,
+      "columns": 5,
+      "sha256": "0afb9074c21c95281badd77d32cc4067d5adf7537280b387039a2beb6d19fd23"
+    },
+    {
+      "file": "data/APA_descriptive_values.csv",
+      "source_workbook": "Source_Data_Revised.xlsx",
+      "source_sheet": "APA_descriptive_values",
+      "rows_including_headers": 11262,
+      "columns": 7,
+      "sha256": "08dedbb209b45ab73d8ef37849f7ac06f8e4a2996fed2789c3a13a434fb56183"
+    },
+    {
+      "file": "data/Representative_expression.csv",
+      "source_workbook": "Source_Data_Revised.xlsx",
+      "source_sheet": "Representative_expression",
+      "rows_including_headers": 9,
+      "columns": 38,
+      "sha256": "d7757200509c57fa7a86341ff7cadbc3c257e531665aeeee862af8e565ee5c2f"
+    },
+    {
+      "file": "data/APA_library_distributions.csv",
+      "source_workbook": "Source_Data_Revised.xlsx",
+      "source_sheet": "APA_library_distributions",
+      "rows_including_headers": 37,
+      "columns": 6,
+      "sha256": "13a81ebb3d1350c1044a715f6e54692f3f84887549f931419abf44060bf38e27"
+    },
+    {
+      "file": "data/APA_threshold_counts.csv",
+      "source_workbook": "Source_Data_Revised.xlsx",
+      "source_sheet": "APA_threshold_counts",
+      "rows_including_headers": 11,
+      "columns": 8,
+      "sha256": "944cc1491bf38db3c2a7b4006e2a37cf3064def0110431b392c40082074d3045"
+    },
+    {
+      "file": "data/Table 9-GroupMean.csv",
+      "source_workbook": "Supplementary_Tables_Revised.xlsx",
+      "source_sheet": "Table 9-GroupMean",
+      "rows_including_headers": 49,
+      "columns": 13,
+      "sha256": "ce6f5acdc52a9699f8b5cfe440b68cab8ac1bd9ebc332370daea13a6d0c44be2"
+    },
+    {
+      "file": "data/Table 11.csv",
+      "source_workbook": "Supplementary_Tables_Revised.xlsx",
+      "source_sheet": "Table 11",
+      "rows_including_headers": 8,
+      "columns": 9,
+      "sha256": "15ec25015b3fcfd4875a833eaf40dee76ffc433d260411bda7244bf681d70d45"
+    },
+    {
+      "file": "data/Table 7.csv",
+      "source_workbook": "Supplementary_Tables_Revised.xlsx",
+      "source_sheet": "Table 7",
+      "rows_including_headers": 11,
+      "columns": 11,
+      "sha256": "f0c0d943e753ff62875ae7e81d30dab86d4b8202b7cdb510b67a2964ae9249c7"
+    },
+    {
+      "file": "data/Table 9-Primers.csv",
+      "source_workbook": "Supplementary_Tables_Revised.xlsx",
+      "source_sheet": "Table 9-Primers",
+      "rows_including_headers": 13,
+      "columns": 15,
+      "sha256": "1317ebc25bbd4538a8db531837cfe91f522d4dde5b39b28991269ebba121bd30"
+    },
+    {
+      "file": "data/Table 9-Notes.csv",
+      "source_workbook": "Supplementary_Tables_Revised.xlsx",
+      "source_sheet": "Table 9-Notes",
+      "rows_including_headers": 11,
+      "columns": 2,
+      "sha256": "1c069abebbfce2f0bf021301473facacd1a7c303153354547d6f66a3940a7d45"
+    },
+    {
+      "file": "data/Table 13.csv",
+      "source_workbook": "Supplementary_Tables_Revised.xlsx",
+      "source_sheet": "Table 13",
+      "rows_including_headers": 22,
+      "columns": 7,
+      "sha256": "b916bf6382dde8735bd3121e5e14a7c7ade3ea263187b376debd98804572d925"
+    }
+  ]
+}

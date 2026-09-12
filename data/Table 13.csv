@@ -1,0 +1,22 @@
+Supplementary Table 13: Descriptive cardiac resilience index,,,,,,
+,,,,,,
+Age class,Genotype,CBTB (min),CZTB (min),Standardised CBTB,Standardised CZTB,PRI_H (PC1)
+1-year,DD,654,791,0.18895834399506536,-0.5275162148933173,-0.23939656633623366
+1-year,GD,789.5,1267.8333333333333,0.8642248656125963,1.7391529577872056,1.840866112916674
+1-year,GG,496,889.3333333333334,-0.5984373048283287,-0.06008006953102825,-0.46564210093866154
+2-year,DD,455,715,-0.8027614921812347,-0.8887888967326458,-1.1961067507197467
+2-year,GD,903,1013,1.4298540184066166,0.5277803031110366,1.3842565038286585
+2-year,GG,399,735.6666666666666,-1.0818384310047162,-0.7905480797412496,-1.3239771987506908
+,,,,,,
+,,,,,,
+Standardisation and PC1 loadings,,,,,,
+Endpoint,Mean (min),Sample SD (min),PC1 loading,,,
+CBTB,616.0833333333334,200.66151017737974,0.7071067811865475,,,
+CZTB,901.9722222222222,210.36741447779897,0.7071067811865475,,,
+,,,,,,
+PC1 variance explained (%),,,87.62674378146113,,,
+,,,,,,
+Each row is one genotype–age mean under the high-dose challenge (10^9 CFU/mL). CBTB and CZTB are centred and divided by their sample standard deviations across the six groups.,,,,,,
+"PRI_H (H, high dose) is the first principal component, oriented towards later cardiac decline and arrest. Equal positive loadings give PRI_H = (z_CBTB + z_CZTB)/sqrt(2). The index is a group-level descriptive summary.",,,,,,
+,,,,,,
+"Source: supplied six-group cardiac means (Source Data, Current_Cardiac_Means).",,,,,,

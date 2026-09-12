@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+Analysis_Code/recomputed/
+Analysis_Code/figure_outputs/
+.venv/
+*.docx
+*.xlsx

@@ -1,0 +1,8 @@
+Plum eigengene genotype × condition interaction,,,,,,,,
+"Within-age ordinary least-squares comparison of full versus main-effects-only models; 18 RNA pools per age, three per genotype × condition cell. Nominal post-selection P values, not adjusted across modules.",,,,,,,,
+,,,,,,,,
+age,n_libraries,term,df_numerator,df_residual,F,p_nominal,SSE_additive,SSE_full
+1-year,18,genotype x condition,2,12,75.64159650445872,1.5755731444287767e-07,0.18688702708736163,0.013734691756829261
+2-year,18,genotype x condition,2,12,3.060870706239602,0.08431171093234989,0.6986013154396774,0.46260541933918015
+,,,,,,,,
+"Input: Source_Data_Revised.xlsx, WGCNA_library_eigengenes (36 libraries). Reproduce with Analysis_Code/recompute_plum_interaction.py. Supplementary Table 1 retains the separate gene-level interaction results.",,,,,,,,

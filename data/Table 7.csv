@@ -1,0 +1,11 @@
+Supplementary Table 7: Representative module genes selected for RT-qPCR,,,,,,,,,,
+,,,,,,,,,,
+gene_id,gene_symbol,kegg_pathway,function_desc,evidence_type,nr_hit,layer_tag,module,kME,kME rank in module,Module gene count
+transcript_HQ_Sd_transcript2472/f3p0/3883,PRKCD,NOD-like/Fc gamma R signaling,"PKC delta, immune signal transduction",high module membership + functional annotation; exploratory selection,Protein kinase C delta,Immune/stress annotation,Plum,0.728050608785018,4,42
+transcript_HQ_Ss_transcript19865/f2p0/2966,NOTCH1,Notch signaling pathway,"Notch 1, Th1/Th2 cell differentiation",high module membership + functional annotation; exploratory selection,Notch receptor 1,Immune/stress annotation,Plum,0.702796997905649,6,42
+transcript_HQ_Ss_transcript32620/f4p0/1389,GSN,Fc gamma R-mediated phagocytosis,"Gelsolin, actin remodeling for phagocytosis",high module membership + functional annotation; exploratory selection,Gelsolin,Immune/stress annotation,Plum,0.630056483790342,12,42
+transcript_HQ_Ss_transcript17940/f2p0/3195,CCNG1,p53 signaling pathway,"Cyclin G1, cell cycle arrest",high module membership + functional annotation; exploratory selection,Cyclin G1,Immune/stress annotation,Plum,0.552643859227432,20,42
+transcript_HQ_Dd_transcript33894/f2p0/1461,CHST11,Glycosaminoglycan biosynthesis,"Chondroitin 4-sulfotransferase, ECM remodeling",hub + OD,Carbohydrate sulfotransferase 11,Metabolism program,Turquoise,0.957132925532089,3,1163
+transcript_HQ_Dd_transcript32902/f4p0/1583,ODC1,Arginine/proline metabolism,"Ornithine decarboxylase, polyamine synthesis",hub + OD,Ornithine decarboxylase 1,Metabolism program,Turquoise,0.951921302796304,8,1163
+transcript_HQ_Dd_transcript31148/f4p0/1785,GALNT,O-glycan biosynthesis,N-acetylgalactosaminyltransferase,hub + OD,Polypeptide N-acetylgalactosaminyltransferase,Metabolism program,Turquoise,0.95079128625812,9,1163
+transcript_HQ_Dd_transcript31067/f2p0/1777,FUT1/2,Glycosphingolipid biosynthesis,"Fucosyltransferase, glycan modification",hub + OD,Fucosyltransferase 1/2,Metabolism program,Turquoise,0.947757958208906,12,1163

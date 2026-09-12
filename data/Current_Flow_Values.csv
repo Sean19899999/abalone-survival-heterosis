@@ -1,0 +1,601 @@
+Genotype,Age,Time,Observation_within_time,value,measure,unit
+GG,1-year,0,1,0.7270694870336196,THC,fold of genotype-age baseline mean
+GG,1-year,0,2,0.9691918386035993,THC,fold of genotype-age baseline mean
+GG,1-year,0,3,1.072596814252612,THC,fold of genotype-age baseline mean
+GG,1-year,0,4,0.8920803790706388,THC,fold of genotype-age baseline mean
+GG,1-year,0,5,1.3390614810395305,THC,fold of genotype-age baseline mean
+DD,1-year,0,1,1.2393737500051758,THC,fold of genotype-age baseline mean
+DD,1-year,0,2,1.4833685988877892,THC,fold of genotype-age baseline mean
+DD,1-year,0,3,0.750131469434909,THC,fold of genotype-age baseline mean
+DD,1-year,0,4,0.5656498316777155,THC,fold of genotype-age baseline mean
+DD,1-year,0,5,0.9614763499944098,THC,fold of genotype-age baseline mean
+GD,1-year,0,1,0.8350061382262186,THC,fold of genotype-age baseline mean
+GD,1-year,0,2,1.1769219283984207,THC,fold of genotype-age baseline mean
+GD,1-year,0,3,0.990576993264541,THC,fold of genotype-age baseline mean
+GD,1-year,0,4,0.8550590596901025,THC,fold of genotype-age baseline mean
+GD,1-year,0,5,1.1424358804207173,THC,fold of genotype-age baseline mean
+GG,1-year,24,1,0.4079657559906203,THC,fold of genotype-age baseline mean
+GG,1-year,24,2,0.4066822993992036,THC,fold of genotype-age baseline mean
+GG,1-year,24,3,0.2843550110307891,THC,fold of genotype-age baseline mean
+GG,1-year,24,4,0.3539218270871779,THC,fold of genotype-age baseline mean
+GG,1-year,24,5,0.3631141513230009,THC,fold of genotype-age baseline mean
+DD,1-year,24,1,2.584585571074239,THC,fold of genotype-age baseline mean
+DD,1-year,24,2,2.528602366035751,THC,fold of genotype-age baseline mean
+DD,1-year,24,3,2.6477944190707285,THC,fold of genotype-age baseline mean
+DD,1-year,24,4,2.6821317510072418,THC,fold of genotype-age baseline mean
+DD,1-year,24,5,2.4934161763305327,THC,fold of genotype-age baseline mean
+GD,1-year,24,1,1.2712764192574404,THC,fold of genotype-age baseline mean
+GD,1-year,24,2,1.9071220013935437,THC,fold of genotype-age baseline mean
+GD,1-year,24,3,1.9446978997312447,THC,fold of genotype-age baseline mean
+GD,1-year,24,4,1.3703382660340422,THC,fold of genotype-age baseline mean
+GD,1-year,24,5,2.1589759116095424,THC,fold of genotype-age baseline mean
+GG,1-year,48,1,0.2360779647847262,THC,fold of genotype-age baseline mean
+GG,1-year,48,2,0.2284899612881741,THC,fold of genotype-age baseline mean
+GG,1-year,48,3,0.2658402824992022,THC,fold of genotype-age baseline mean
+GG,1-year,48,4,0.2590674473782797,THC,fold of genotype-age baseline mean
+GG,1-year,48,5,0.2861154278419892,THC,fold of genotype-age baseline mean
+DD,1-year,48,1,0.1928459923561392,THC,fold of genotype-age baseline mean
+DD,1-year,48,2,0.2004443045784489,THC,fold of genotype-age baseline mean
+DD,1-year,48,3,0.2652887565682957,THC,fold of genotype-age baseline mean
+DD,1-year,48,4,0.2147610154823375,THC,fold of genotype-age baseline mean
+DD,1-year,48,5,0.3340151800613662,THC,fold of genotype-age baseline mean
+GD,1-year,48,1,3.0183483194532004,THC,fold of genotype-age baseline mean
+GD,1-year,48,2,2.7605428182753244,THC,fold of genotype-age baseline mean
+GD,1-year,48,3,1.9340804273532632,THC,fold of genotype-age baseline mean
+GD,1-year,48,4,2.1969458177112715,THC,fold of genotype-age baseline mean
+GD,1-year,48,5,2.738768705000166,THC,fold of genotype-age baseline mean
+GG,1-year,96,1,0.5531697909006397,THC,fold of genotype-age baseline mean
+GG,1-year,96,2,0.5338485659974193,THC,fold of genotype-age baseline mean
+GG,1-year,96,3,0.5539849592762693,THC,fold of genotype-age baseline mean
+GG,1-year,96,4,0.5924192809868046,THC,fold of genotype-age baseline mean
+GG,1-year,96,5,0.5492413730904248,THC,fold of genotype-age baseline mean
+DD,1-year,96,1,0.6682995101469559,THC,fold of genotype-age baseline mean
+DD,1-year,96,2,0.5906186723864496,THC,fold of genotype-age baseline mean
+DD,1-year,96,3,0.6188587210819002,THC,fold of genotype-age baseline mean
+DD,1-year,96,4,0.648144314102219,THC,fold of genotype-age baseline mean
+DD,1-year,96,5,0.6369538842489264,THC,fold of genotype-age baseline mean
+GD,1-year,96,1,2.211565579481735,THC,fold of genotype-age baseline mean
+GD,1-year,96,2,3.308089186767975,THC,fold of genotype-age baseline mean
+GD,1-year,96,3,3.4594296426556954,THC,fold of genotype-age baseline mean
+GD,1-year,96,4,3.4369919373569133,THC,fold of genotype-age baseline mean
+GD,1-year,96,5,2.870844254952056,THC,fold of genotype-age baseline mean
+GG,1-year,168,1,0.2679909394902249,THC,fold of genotype-age baseline mean
+GG,1-year,168,2,0.2337625397177783,THC,fold of genotype-age baseline mean
+GG,1-year,168,3,0.3018811311068252,THC,fold of genotype-age baseline mean
+GG,1-year,168,4,0.2777989760097681,THC,fold of genotype-age baseline mean
+GG,1-year,168,5,0.221760486187232,THC,fold of genotype-age baseline mean
+DD,1-year,168,1,0.2299369360789396,THC,fold of genotype-age baseline mean
+DD,1-year,168,2,0.2121419787081626,THC,fold of genotype-age baseline mean
+DD,1-year,168,3,0.1917590403352367,THC,fold of genotype-age baseline mean
+DD,1-year,168,4,0.2336636287220342,THC,fold of genotype-age baseline mean
+DD,1-year,168,5,0.2218106757321915,THC,fold of genotype-age baseline mean
+GD,1-year,168,1,5.16564915889711,THC,fold of genotype-age baseline mean
+GD,1-year,168,2,4.372926274926176,THC,fold of genotype-age baseline mean
+GD,1-year,168,3,4.689335246690335,THC,fold of genotype-age baseline mean
+GD,1-year,168,4,4.20391768140947,THC,fold of genotype-age baseline mean
+GD,1-year,168,5,,THC,fold of genotype-age baseline mean
+GG,2-year,0,1,1.0501835580495442,THC,fold of genotype-age baseline mean
+GG,2-year,0,2,1.017198231669,THC,fold of genotype-age baseline mean
+GG,2-year,0,3,0.8083830354878895,THC,fold of genotype-age baseline mean
+GG,2-year,0,4,1.0818128700100322,THC,fold of genotype-age baseline mean
+GG,2-year,0,5,1.0424223047835337,THC,fold of genotype-age baseline mean
+DD,2-year,0,1,1.0544350307105863,THC,fold of genotype-age baseline mean
+DD,2-year,0,2,0.9497499269887724,THC,fold of genotype-age baseline mean
+DD,2-year,0,3,0.803872729580174,THC,fold of genotype-age baseline mean
+DD,2-year,0,4,1.132721415148721,THC,fold of genotype-age baseline mean
+DD,2-year,0,5,1.059220897571746,THC,fold of genotype-age baseline mean
+GD,2-year,0,1,1.0808039131266742,THC,fold of genotype-age baseline mean
+GD,2-year,0,2,0.9657541618828932,THC,fold of genotype-age baseline mean
+GD,2-year,0,3,0.8964592103584641,THC,fold of genotype-age baseline mean
+GD,2-year,0,4,0.7887645107794362,THC,fold of genotype-age baseline mean
+GD,2-year,0,5,1.268218203852532,THC,fold of genotype-age baseline mean
+GG,2-year,24,1,0.2386144398998974,THC,fold of genotype-age baseline mean
+GG,2-year,24,2,0.3011895443571058,THC,fold of genotype-age baseline mean
+GG,2-year,24,3,0.3096894396242848,THC,fold of genotype-age baseline mean
+GG,2-year,24,4,0.3277145093542946,THC,fold of genotype-age baseline mean
+GG,2-year,24,5,0.3395327813729921,THC,fold of genotype-age baseline mean
+DD,2-year,24,1,0.5859705294575457,THC,fold of genotype-age baseline mean
+DD,2-year,24,2,0.5217130039494869,THC,fold of genotype-age baseline mean
+DD,2-year,24,3,0.5244958402713112,THC,fold of genotype-age baseline mean
+DD,2-year,24,4,0.4596114120753689,THC,fold of genotype-age baseline mean
+DD,2-year,24,5,0.5312159312792332,THC,fold of genotype-age baseline mean
+GD,2-year,24,1,0.8555978122209466,THC,fold of genotype-age baseline mean
+GD,2-year,24,2,0.9711359070034442,THC,fold of genotype-age baseline mean
+GD,2-year,24,3,1.005329920908279,THC,fold of genotype-age baseline mean
+GD,2-year,24,4,0.8343199866054343,THC,fold of genotype-age baseline mean
+GD,2-year,24,5,1.0459321979844367,THC,fold of genotype-age baseline mean
+GG,2-year,48,1,0.7740416946872898,THC,fold of genotype-age baseline mean
+GG,2-year,48,2,1.0664006085528128,THC,fold of genotype-age baseline mean
+GG,2-year,48,3,0.9375571896325532,THC,fold of genotype-age baseline mean
+GG,2-year,48,4,0.6745565391866118,THC,fold of genotype-age baseline mean
+GG,2-year,48,5,1.0157760702040637,THC,fold of genotype-age baseline mean
+DD,2-year,48,1,0.2017250527133418,THC,fold of genotype-age baseline mean
+DD,2-year,48,2,0.1793400396630627,THC,fold of genotype-age baseline mean
+DD,2-year,48,3,0.1450668110071879,THC,fold of genotype-age baseline mean
+DD,2-year,48,4,0.1716872397780458,THC,fold of genotype-age baseline mean
+DD,2-year,48,5,0.2141178485311364,THC,fold of genotype-age baseline mean
+GD,2-year,48,1,1.6997145681847174,THC,fold of genotype-age baseline mean
+GD,2-year,48,2,1.323959130628907,THC,fold of genotype-age baseline mean
+GD,2-year,48,3,1.6364989954075773,THC,fold of genotype-age baseline mean
+GD,2-year,48,4,1.4196644980227069,THC,fold of genotype-age baseline mean
+GD,2-year,48,5,1.9943352149508864,THC,fold of genotype-age baseline mean
+GG,2-year,96,1,0.8159789211416979,THC,fold of genotype-age baseline mean
+GG,2-year,96,2,1.0309127189742795,THC,fold of genotype-age baseline mean
+GG,2-year,96,3,0.9028410155776292,THC,fold of genotype-age baseline mean
+GG,2-year,96,4,0.9090698623039016,THC,fold of genotype-age baseline mean
+GG,2-year,96,5,0.9814016558810236,THC,fold of genotype-age baseline mean
+DD,2-year,96,1,0.3636800105197328,THC,fold of genotype-age baseline mean
+DD,2-year,96,2,0.334605487080453,THC,fold of genotype-age baseline mean
+DD,2-year,96,3,0.402364493454983,THC,fold of genotype-age baseline mean
+DD,2-year,96,4,0.3394678054889152,THC,fold of genotype-age baseline mean
+DD,2-year,96,5,0.3977697554620807,THC,fold of genotype-age baseline mean
+GD,2-year,96,1,2.335956435769869,THC,fold of genotype-age baseline mean
+GD,2-year,96,2,2.3427434143385635,THC,fold of genotype-age baseline mean
+GD,2-year,96,3,2.3263091593315472,THC,fold of genotype-age baseline mean
+GD,2-year,96,4,2.326608145171578,THC,fold of genotype-age baseline mean
+GD,2-year,96,5,2.590413318025258,THC,fold of genotype-age baseline mean
+GG,2-year,168,1,2.537962891507822,THC,fold of genotype-age baseline mean
+GG,2-year,168,2,2.497657292160473,THC,fold of genotype-age baseline mean
+GG,2-year,168,3,2.265381944061649,THC,fold of genotype-age baseline mean
+GG,2-year,168,4,2.333270861124279,THC,fold of genotype-age baseline mean
+GG,2-year,168,5,2.340635232121005,THC,fold of genotype-age baseline mean
+DD,2-year,168,1,1.4793680209293756,THC,fold of genotype-age baseline mean
+DD,2-year,168,2,1.4395826357129642,THC,fold of genotype-age baseline mean
+DD,2-year,168,3,1.3836201030872664,THC,fold of genotype-age baseline mean
+DD,2-year,168,4,1.3623283471634182,THC,fold of genotype-age baseline mean
+DD,2-year,168,5,1.70036650871777,THC,fold of genotype-age baseline mean
+GD,2-year,168,1,1.8643361717055744,THC,fold of genotype-age baseline mean
+GD,2-year,168,2,2.17539107347876,THC,fold of genotype-age baseline mean
+GD,2-year,168,3,2.096977053833397,THC,fold of genotype-age baseline mean
+GD,2-year,168,4,2.193110967597908,THC,fold of genotype-age baseline mean
+GD,2-year,168,5,1.744074100650593,THC,fold of genotype-age baseline mean
+GG,1-year,0,1,2.69576748350041,MOR,percent
+GG,1-year,0,2,1.8876738471531496,MOR,percent
+GG,1-year,0,3,1.41991172881285,MOR,percent
+GG,1-year,0,4,1.5609586700147,MOR,percent
+GG,1-year,0,5,0.97188875947926,MOR,percent
+DD,1-year,0,1,1.6145054417238802,MOR,percent
+DD,1-year,0,2,1.35316894007432,MOR,percent
+DD,1-year,0,3,2.84589076050146,MOR,percent
+DD,1-year,0,4,7.391007026474029,MOR,percent
+DD,1-year,0,5,3.07388117767191,MOR,percent
+GD,1-year,0,1,6.9900016376246406,MOR,percent
+GD,1-year,0,2,3.9770389979055,MOR,percent
+GD,1-year,0,3,1.9704147604510904,MOR,percent
+GD,1-year,0,4,4.9107546992664,MOR,percent
+GD,1-year,0,5,2.43992343181605,MOR,percent
+GG,1-year,24,1,5.791839280858619,MOR,percent
+GG,1-year,24,2,6.66936064128419,MOR,percent
+GG,1-year,24,3,9.37215221979654,MOR,percent
+GG,1-year,24,4,7.280037030459879,MOR,percent
+GG,1-year,24,5,8.85399917523276,MOR,percent
+DD,1-year,24,1,3.8604629471886898,MOR,percent
+DD,1-year,24,2,3.63336795474981,MOR,percent
+DD,1-year,24,3,4.02968570594441,MOR,percent
+DD,1-year,24,4,4.01980312661035,MOR,percent
+DD,1-year,24,5,4.22551312071817,MOR,percent
+GD,1-year,24,1,6.60923067381774,MOR,percent
+GD,1-year,24,2,4.60882767049294,MOR,percent
+GD,1-year,24,3,3.75947914909215,MOR,percent
+GD,1-year,24,4,6.33318155441094,MOR,percent
+GD,1-year,24,5,3.20592710883309,MOR,percent
+GG,1-year,48,1,35.92506772992987,MOR,percent
+GG,1-year,48,2,34.47339268616401,MOR,percent
+GG,1-year,48,3,31.866815453360697,MOR,percent
+GG,1-year,48,4,36.029740752745695,MOR,percent
+GG,1-year,48,5,31.41152353649573,MOR,percent
+DD,1-year,48,1,13.54196507202387,MOR,percent
+DD,1-year,48,2,11.75601317813958,MOR,percent
+DD,1-year,48,3,7.29830504414627,MOR,percent
+DD,1-year,48,4,11.69277054958942,MOR,percent
+DD,1-year,48,5,5.41163705411636,MOR,percent
+GD,1-year,48,1,10.42081384680185,MOR,percent
+GD,1-year,48,2,11.53663187833206,MOR,percent
+GD,1-year,48,3,17.110689260335548,MOR,percent
+GD,1-year,48,4,14.56483474705288,MOR,percent
+GD,1-year,48,5,11.712465711627573,MOR,percent
+GG,1-year,96,1,25.325102272565008,MOR,percent
+GG,1-year,96,2,29.18476058132129,MOR,percent
+GG,1-year,96,3,28.979203922082817,MOR,percent
+GG,1-year,96,4,27.557403103954748,MOR,percent
+GG,1-year,96,5,28.626750572744168,MOR,percent
+DD,1-year,96,1,3.60421927753046,MOR,percent
+DD,1-year,96,2,5.43591324112956,MOR,percent
+DD,1-year,96,3,3.99520899532327,MOR,percent
+DD,1-year,96,4,4.60343617853504,MOR,percent
+DD,1-year,96,5,4.41021283990905,MOR,percent
+GD,1-year,96,1,2.97912600903118,MOR,percent
+GD,1-year,96,2,1.83337508295098,MOR,percent
+GD,1-year,96,3,1.74469473658471,MOR,percent
+GD,1-year,96,4,1.7481633525968698,MOR,percent
+GD,1-year,96,5,2.93328605464364,MOR,percent
+GG,1-year,168,1,14.91175037317342,MOR,percent
+GG,1-year,168,2,26.48760943760201,MOR,percent
+GG,1-year,168,3,13.96878362393132,MOR,percent
+GG,1-year,168,4,11.22637643048815,MOR,percent
+GG,1-year,168,5,20.53607519362917,MOR,percent
+DD,1-year,168,1,19.018619852260752,MOR,percent
+DD,1-year,168,2,23.50177046690176,MOR,percent
+DD,1-year,168,3,20.23182128189066,MOR,percent
+DD,1-year,168,4,21.63242640053479,MOR,percent
+DD,1-year,168,5,24.21179533363799,MOR,percent
+GD,1-year,168,1,3.02970297029702,MOR,percent
+GD,1-year,168,2,3.9845671269549694,MOR,percent
+GD,1-year,168,3,3.99572997882459,MOR,percent
+GD,1-year,168,4,5.0882873245124,MOR,percent
+GD,1-year,168,5,,MOR,percent
+GG,2-year,0,1,2.1712145075245,MOR,percent
+GG,2-year,0,2,2.23067642583131,MOR,percent
+GG,2-year,0,3,2.3950819924476603,MOR,percent
+GG,2-year,0,4,1.55815883235152,MOR,percent
+GG,2-year,0,5,1.53052521687047,MOR,percent
+DD,2-year,0,1,1.43150217923432,MOR,percent
+DD,2-year,0,2,1.6787107233854002,MOR,percent
+DD,2-year,0,3,1.9612525409728896,MOR,percent
+DD,2-year,0,4,1.51592162766444,MOR,percent
+DD,2-year,0,5,3.1525693493794296,MOR,percent
+GD,2-year,0,1,2.94271591534378,MOR,percent
+GD,2-year,0,2,3.76642846786768,MOR,percent
+GD,2-year,0,3,1.3955607900979,MOR,percent
+GD,2-year,0,4,3.2487717588093497,MOR,percent
+GD,2-year,0,5,1.39836351849437,MOR,percent
+GG,2-year,24,1,8.10944335978598,MOR,percent
+GG,2-year,24,2,5.08647057970804,MOR,percent
+GG,2-year,24,3,6.510735442203219,MOR,percent
+GG,2-year,24,4,5.92500614523539,MOR,percent
+GG,2-year,24,5,6.95499707773232,MOR,percent
+DD,2-year,24,1,3.38364134145846,MOR,percent
+DD,2-year,24,2,4.59658046518592,MOR,percent
+DD,2-year,24,3,4.52361452164457,MOR,percent
+DD,2-year,24,4,8.81760919696214,MOR,percent
+DD,2-year,24,5,4.44894785949724,MOR,percent
+GD,2-year,24,1,4.63483972159592,MOR,percent
+GD,2-year,24,2,4.2109004472073694,MOR,percent
+GD,2-year,24,3,4.65234837618226,MOR,percent
+GD,2-year,24,4,5.437046840322799,MOR,percent
+GD,2-year,24,5,4.15034395157318,MOR,percent
+GG,2-year,48,1,3.3284113473517096,MOR,percent
+GG,2-year,48,2,2.03379213140997,MOR,percent
+GG,2-year,48,3,1.85609073941976,MOR,percent
+GG,2-year,48,4,3.92327561976456,MOR,percent
+GG,2-year,48,5,1.79098549764677,MOR,percent
+DD,2-year,48,1,5.37751417831088,MOR,percent
+DD,2-year,48,2,7.676074112654669,MOR,percent
+DD,2-year,48,3,8.6699800414824,MOR,percent
+DD,2-year,48,4,8.78722240127116,MOR,percent
+DD,2-year,48,5,5.05545466532942,MOR,percent
+GD,2-year,48,1,2.60783120317801,MOR,percent
+GD,2-year,48,2,4.860782815080031,MOR,percent
+GD,2-year,48,3,2.0191254532414,MOR,percent
+GD,2-year,48,4,4.002794697081749,MOR,percent
+GD,2-year,48,5,2.2245982531389896,MOR,percent
+GG,2-year,96,1,9.79678323165695,MOR,percent
+GG,2-year,96,2,6.2854891535501,MOR,percent
+GG,2-year,96,3,7.37072095369841,MOR,percent
+GG,2-year,96,4,8.63312928753431,MOR,percent
+GG,2-year,96,5,7.46818492228912,MOR,percent
+DD,2-year,96,1,4.28417111208703,MOR,percent
+DD,2-year,96,2,4.423378796855619,MOR,percent
+DD,2-year,96,3,3.49618013292874,MOR,percent
+DD,2-year,96,4,4.90360231212635,MOR,percent
+DD,2-year,96,5,5.04474941526327,MOR,percent
+GD,2-year,96,1,1.1081904135598402,MOR,percent
+GD,2-year,96,2,0.8205722111759101,MOR,percent
+GD,2-year,96,3,1.06259824851476,MOR,percent
+GD,2-year,96,4,1.32764452285879,MOR,percent
+GD,2-year,96,5,0.85790296481171,MOR,percent
+GG,2-year,168,1,3.73627964461874,MOR,percent
+GG,2-year,168,2,3.83669211528422,MOR,percent
+GG,2-year,168,3,4.56476859544669,MOR,percent
+GG,2-year,168,4,4.73495469975641,MOR,percent
+GG,2-year,168,5,4.56165948935976,MOR,percent
+DD,2-year,168,1,1.40756933722146,MOR,percent
+DD,2-year,168,2,1.52262820546526,MOR,percent
+DD,2-year,168,3,1.84648158704697,MOR,percent
+DD,2-year,168,4,2.17911238077987,MOR,percent
+DD,2-year,168,5,1.03482487666331,MOR,percent
+GD,2-year,168,1,1.5764013188335102,MOR,percent
+GD,2-year,168,2,1.32230928118994,MOR,percent
+GD,2-year,168,3,3.24556007349947,MOR,percent
+GD,2-year,168,4,1.45756540162889,MOR,percent
+GD,2-year,168,5,2.70135631326662,MOR,percent
+GG,1-year,0,1,5.13891157248261,PHA,percent
+GG,1-year,0,2,6.424002740643241,PHA,percent
+GG,1-year,0,3,5.03462764920628,PHA,percent
+GG,1-year,0,4,5.24041968594296,PHA,percent
+GG,1-year,0,5,2.7157959559394,PHA,percent
+DD,1-year,0,1,2.6229469694488703,PHA,percent
+DD,1-year,0,2,1.8720771682176,PHA,percent
+DD,1-year,0,3,3.78134255747863,PHA,percent
+DD,1-year,0,4,4.609300284371249,PHA,percent
+DD,1-year,0,5,2.9023442509412,PHA,percent
+GD,1-year,0,1,4.0450681187922095,PHA,percent
+GD,1-year,0,2,4.11577393070737,PHA,percent
+GD,1-year,0,3,5.21300559967234,PHA,percent
+GD,1-year,0,4,6.322257501621429,PHA,percent
+GD,1-year,0,5,4.030235482570601,PHA,percent
+GG,1-year,24,1,6.18269940674876,PHA,percent
+GG,1-year,24,2,6.570046718080199,PHA,percent
+GG,1-year,24,3,10.95381953565896,PHA,percent
+GG,1-year,24,4,6.8366491897646,PHA,percent
+GG,1-year,24,5,7.535104628154821,PHA,percent
+DD,1-year,24,1,1.43380194022478,PHA,percent
+DD,1-year,24,2,1.33665838908916,PHA,percent
+DD,1-year,24,3,0.97111015748573,PHA,percent
+DD,1-year,24,4,1.10655539588579,PHA,percent
+DD,1-year,24,5,1.09221652242238,PHA,percent
+GD,1-year,24,1,10.7074724502334,PHA,percent
+GD,1-year,24,2,4.700375709232181,PHA,percent
+GD,1-year,24,3,4.89488129644289,PHA,percent
+GD,1-year,24,4,8.43695278866425,PHA,percent
+GD,1-year,24,5,4.5703790442246,PHA,percent
+GG,1-year,48,1,20.50073776433221,PHA,percent
+GG,1-year,48,2,23.11323909831396,PHA,percent
+GG,1-year,48,3,16.9092794126909,PHA,percent
+GG,1-year,48,4,17.35705805969229,PHA,percent
+GG,1-year,48,5,17.66606357844282,PHA,percent
+DD,1-year,48,1,17.59964900886459,PHA,percent
+DD,1-year,48,2,16.829586692594788,PHA,percent
+DD,1-year,48,3,12.76703059543867,PHA,percent
+DD,1-year,48,4,15.90524906149151,PHA,percent
+DD,1-year,48,5,9.159090923038873,PHA,percent
+GD,1-year,48,1,6.34775350267795,PHA,percent
+GD,1-year,48,2,7.031659070354141,PHA,percent
+GD,1-year,48,3,10.04249954298712,PHA,percent
+GD,1-year,48,4,9.46587905095091,PHA,percent
+GD,1-year,48,5,6.19310416693217,PHA,percent
+GG,1-year,96,1,6.857065825100089,PHA,percent
+GG,1-year,96,2,3.7565379344952,PHA,percent
+GG,1-year,96,3,3.13340716996467,PHA,percent
+GG,1-year,96,4,3.80432435315434,PHA,percent
+GG,1-year,96,5,1.2503448971249,PHA,percent
+DD,1-year,96,1,4.42514046007903,PHA,percent
+DD,1-year,96,2,4.752706051970209,PHA,percent
+DD,1-year,96,3,4.6901017591639,PHA,percent
+DD,1-year,96,4,3.62164716256008,PHA,percent
+DD,1-year,96,5,2.7128358862214803,PHA,percent
+GD,1-year,96,1,3.38390825214339,PHA,percent
+GD,1-year,96,2,2.25047610701242,PHA,percent
+GD,1-year,96,3,2.65163758466218,PHA,percent
+GD,1-year,96,4,1.96719005193629,PHA,percent
+GD,1-year,96,5,2.4772679306373497,PHA,percent
+GG,1-year,168,1,9.64227575072816,PHA,percent
+GG,1-year,168,2,12.701483458926091,PHA,percent
+GG,1-year,168,3,0.38105344532327,PHA,percent
+GG,1-year,168,4,0.6522308908171199,PHA,percent
+GG,1-year,168,5,,PHA,percent
+DD,1-year,168,1,21.10423765229034,PHA,percent
+DD,1-year,168,2,21.73550688402173,PHA,percent
+DD,1-year,168,3,22.9517607342682,PHA,percent
+DD,1-year,168,4,21.214073161702128,PHA,percent
+DD,1-year,168,5,8.90347470365648,PHA,percent
+GD,1-year,168,1,5.73169350254977,PHA,percent
+GD,1-year,168,2,6.09633276995167,PHA,percent
+GD,1-year,168,3,4.98182272424145,PHA,percent
+GD,1-year,168,4,5.7008482969713805,PHA,percent
+GD,1-year,168,5,,PHA,percent
+GG,2-year,0,1,4.06515472824012,PHA,percent
+GG,2-year,0,2,4.60853118162131,PHA,percent
+GG,2-year,0,3,6.35875918825005,PHA,percent
+GG,2-year,0,4,4.10526642913761,PHA,percent
+GG,2-year,0,5,2.8978628918891003,PHA,percent
+DD,2-year,0,1,4.4270071719400494,PHA,percent
+DD,2-year,0,2,3.42283481743114,PHA,percent
+DD,2-year,0,3,2.11213369406328,PHA,percent
+DD,2-year,0,4,1.49625490214684,PHA,percent
+DD,2-year,0,5,0.90687732485463,PHA,percent
+GD,2-year,0,1,3.25214753348968,PHA,percent
+GD,2-year,0,2,2.5562206076649203,PHA,percent
+GD,2-year,0,3,4.56648082818287,PHA,percent
+GD,2-year,0,4,2.6787867809322097,PHA,percent
+GD,2-year,0,5,2.57201894237768,PHA,percent
+GG,2-year,24,1,10.9263582983691,PHA,percent
+GG,2-year,24,2,7.260122059058021,PHA,percent
+GG,2-year,24,3,6.874405001284719,PHA,percent
+GG,2-year,24,4,7.16277979140173,PHA,percent
+GG,2-year,24,5,5.85056313930633,PHA,percent
+DD,2-year,24,1,4.34448795452308,PHA,percent
+DD,2-year,24,2,6.296989658520951,PHA,percent
+DD,2-year,24,3,5.576477770217069,PHA,percent
+DD,2-year,24,4,4.47922715688848,PHA,percent
+DD,2-year,24,5,4.70298454633903,PHA,percent
+GD,2-year,24,1,6.07570192080361,PHA,percent
+GD,2-year,24,2,4.21650412940065,PHA,percent
+GD,2-year,24,3,4.13460611679662,PHA,percent
+GD,2-year,24,4,10.9325428152921,PHA,percent
+GD,2-year,24,5,4.01912856796218,PHA,percent
+GG,2-year,48,1,6.86223605197966,PHA,percent
+GG,2-year,48,2,4.56363686611605,PHA,percent
+GG,2-year,48,3,5.01941766675285,PHA,percent
+GG,2-year,48,4,9.81425712152989,PHA,percent
+GG,2-year,48,5,3.846952343761581,PHA,percent
+DD,2-year,48,1,11.78270730127662,PHA,percent
+DD,2-year,48,2,11.08617128231707,PHA,percent
+DD,2-year,48,3,16.05760576057605,PHA,percent
+DD,2-year,48,4,11.238088897726213,PHA,percent
+DD,2-year,48,5,12.0357993952714,PHA,percent
+GD,2-year,48,1,3.01263869966516,PHA,percent
+GD,2-year,48,2,4.10336396656715,PHA,percent
+GD,2-year,48,3,2.6509063622174702,PHA,percent
+GD,2-year,48,4,2.12099284032637,PHA,percent
+GD,2-year,48,5,2.30670161114357,PHA,percent
+GG,2-year,96,1,9.45473321904912,PHA,percent
+GG,2-year,96,2,8.11912740503552,PHA,percent
+GG,2-year,96,3,7.351479708011829,PHA,percent
+GG,2-year,96,4,6.9055020322731,PHA,percent
+GG,2-year,96,5,5.70713890081436,PHA,percent
+DD,2-year,96,1,7.15194075640483,PHA,percent
+DD,2-year,96,2,6.2579926510027,PHA,percent
+DD,2-year,96,3,5.29824310570901,PHA,percent
+DD,2-year,96,4,5.2644511799332,PHA,percent
+DD,2-year,96,5,3.98839832089073,PHA,percent
+GD,2-year,96,1,3.85249126564618,PHA,percent
+GD,2-year,96,2,3.43542483776303,PHA,percent
+GD,2-year,96,3,2.99019063075016,PHA,percent
+GD,2-year,96,4,2.67253572647905,PHA,percent
+GD,2-year,96,5,3.40725554549914,PHA,percent
+GG,2-year,168,1,7.65312760213822,PHA,percent
+GG,2-year,168,2,7.14413543713621,PHA,percent
+GG,2-year,168,3,7.72675558923673,PHA,percent
+GG,2-year,168,4,7.38842275960884,PHA,percent
+GG,2-year,168,5,7.45768696844061,PHA,percent
+DD,2-year,168,1,4.1827748437569,PHA,percent
+DD,2-year,168,2,3.11531524899701,PHA,percent
+DD,2-year,168,3,3.4511362231371705,PHA,percent
+DD,2-year,168,4,3.18271311965226,PHA,percent
+DD,2-year,168,5,1.10348956581186,PHA,percent
+GD,2-year,168,1,5.0969991742206,PHA,percent
+GD,2-year,168,2,3.82985975173611,PHA,percent
+GD,2-year,168,3,3.6107775761013103,PHA,percent
+GD,2-year,168,4,3.39558449721502,PHA,percent
+GD,2-year,168,5,4.32057631559874,PHA,percent
+GG,1-year,0,1,73034.0,ROS,fluorescence arbitrary units
+GG,1-year,0,2,54317.7,ROS,fluorescence arbitrary units
+GG,1-year,0,3,54904.2,ROS,fluorescence arbitrary units
+GG,1-year,0,4,62216.1,ROS,fluorescence arbitrary units
+GG,1-year,0,5,62299.3,ROS,fluorescence arbitrary units
+DD,1-year,0,1,297081.2,ROS,fluorescence arbitrary units
+DD,1-year,0,2,274569.2,ROS,fluorescence arbitrary units
+DD,1-year,0,3,283999.8,ROS,fluorescence arbitrary units
+DD,1-year,0,4,321043.1,ROS,fluorescence arbitrary units
+DD,1-year,0,5,260755.3,ROS,fluorescence arbitrary units
+GD,1-year,0,1,121078.7,ROS,fluorescence arbitrary units
+GD,1-year,0,2,119037.2,ROS,fluorescence arbitrary units
+GD,1-year,0,3,128281.1,ROS,fluorescence arbitrary units
+GD,1-year,0,4,130607.7,ROS,fluorescence arbitrary units
+GD,1-year,0,5,133838.9,ROS,fluorescence arbitrary units
+GG,1-year,24,1,167492.8,ROS,fluorescence arbitrary units
+GG,1-year,24,2,147102.1,ROS,fluorescence arbitrary units
+GG,1-year,24,3,132245.3,ROS,fluorescence arbitrary units
+GG,1-year,24,4,123468.2,ROS,fluorescence arbitrary units
+GG,1-year,24,5,118598.3,ROS,fluorescence arbitrary units
+DD,1-year,24,1,98232.0,ROS,fluorescence arbitrary units
+DD,1-year,24,2,94064.9,ROS,fluorescence arbitrary units
+DD,1-year,24,3,72978.6,ROS,fluorescence arbitrary units
+DD,1-year,24,4,78314.1,ROS,fluorescence arbitrary units
+DD,1-year,24,5,81228.6,ROS,fluorescence arbitrary units
+GD,1-year,24,1,142802.1,ROS,fluorescence arbitrary units
+GD,1-year,24,2,140922.9,ROS,fluorescence arbitrary units
+GD,1-year,24,3,140215.6,ROS,fluorescence arbitrary units
+GD,1-year,24,4,135356.0,ROS,fluorescence arbitrary units
+GD,1-year,24,5,140449.1,ROS,fluorescence arbitrary units
+GG,1-year,48,1,121308.9,ROS,fluorescence arbitrary units
+GG,1-year,48,2,112587.8,ROS,fluorescence arbitrary units
+GG,1-year,48,3,118124.1,ROS,fluorescence arbitrary units
+GG,1-year,48,4,111889.7,ROS,fluorescence arbitrary units
+GG,1-year,48,5,100446.4,ROS,fluorescence arbitrary units
+DD,1-year,48,1,141474.5,ROS,fluorescence arbitrary units
+DD,1-year,48,2,143398.7,ROS,fluorescence arbitrary units
+DD,1-year,48,3,133792.8,ROS,fluorescence arbitrary units
+DD,1-year,48,4,128040.3,ROS,fluorescence arbitrary units
+DD,1-year,48,5,136596.5,ROS,fluorescence arbitrary units
+GD,1-year,48,1,131771.7,ROS,fluorescence arbitrary units
+GD,1-year,48,2,81665.4,ROS,fluorescence arbitrary units
+GD,1-year,48,3,122678.3,ROS,fluorescence arbitrary units
+GD,1-year,48,4,111324.7,ROS,fluorescence arbitrary units
+GD,1-year,48,5,115375.0,ROS,fluorescence arbitrary units
+GG,1-year,96,1,299904.8,ROS,fluorescence arbitrary units
+GG,1-year,96,2,267341.1,ROS,fluorescence arbitrary units
+GG,1-year,96,3,244194.6,ROS,fluorescence arbitrary units
+GG,1-year,96,4,218810.3,ROS,fluorescence arbitrary units
+GG,1-year,96,5,239547.5,ROS,fluorescence arbitrary units
+DD,1-year,96,1,164638.4,ROS,fluorescence arbitrary units
+DD,1-year,96,2,169690.3,ROS,fluorescence arbitrary units
+DD,1-year,96,3,205677.3,ROS,fluorescence arbitrary units
+DD,1-year,96,4,211236.5,ROS,fluorescence arbitrary units
+DD,1-year,96,5,202955.5,ROS,fluorescence arbitrary units
+GD,1-year,96,1,109103.9,ROS,fluorescence arbitrary units
+GD,1-year,96,2,115009.1,ROS,fluorescence arbitrary units
+GD,1-year,96,3,112044.8,ROS,fluorescence arbitrary units
+GD,1-year,96,4,121353.7,ROS,fluorescence arbitrary units
+GD,1-year,96,5,111829.4,ROS,fluorescence arbitrary units
+GG,1-year,168,1,83852.1,ROS,fluorescence arbitrary units
+GG,1-year,168,2,72599.7,ROS,fluorescence arbitrary units
+GG,1-year,168,3,88636.3,ROS,fluorescence arbitrary units
+GG,1-year,168,4,74219.9,ROS,fluorescence arbitrary units
+GG,1-year,168,5,69422.6,ROS,fluorescence arbitrary units
+DD,1-year,168,1,156558.8,ROS,fluorescence arbitrary units
+DD,1-year,168,2,140163.5,ROS,fluorescence arbitrary units
+DD,1-year,168,3,160404.0,ROS,fluorescence arbitrary units
+DD,1-year,168,4,118565.9,ROS,fluorescence arbitrary units
+DD,1-year,168,5,156057.4,ROS,fluorescence arbitrary units
+GD,1-year,168,1,26521.2,ROS,fluorescence arbitrary units
+GD,1-year,168,2,32428.7,ROS,fluorescence arbitrary units
+GD,1-year,168,3,29472.3,ROS,fluorescence arbitrary units
+GD,1-year,168,4,31977.7,ROS,fluorescence arbitrary units
+GD,1-year,168,5,,ROS,fluorescence arbitrary units
+GG,2-year,0,1,56720.5,ROS,fluorescence arbitrary units
+GG,2-year,0,2,49560.1,ROS,fluorescence arbitrary units
+GG,2-year,0,3,45813.0,ROS,fluorescence arbitrary units
+GG,2-year,0,4,44054.8,ROS,fluorescence arbitrary units
+GG,2-year,0,5,45290.9,ROS,fluorescence arbitrary units
+DD,2-year,0,1,117137.8,ROS,fluorescence arbitrary units
+DD,2-year,0,2,121554.2,ROS,fluorescence arbitrary units
+DD,2-year,0,3,114005.4,ROS,fluorescence arbitrary units
+DD,2-year,0,4,116932.7,ROS,fluorescence arbitrary units
+DD,2-year,0,5,121108.6,ROS,fluorescence arbitrary units
+GD,2-year,0,1,62613.0,ROS,fluorescence arbitrary units
+GD,2-year,0,2,63810.1,ROS,fluorescence arbitrary units
+GD,2-year,0,3,62917.5,ROS,fluorescence arbitrary units
+GD,2-year,0,4,62026.0,ROS,fluorescence arbitrary units
+GD,2-year,0,5,62300.0,ROS,fluorescence arbitrary units
+GG,2-year,24,1,50268.1,ROS,fluorescence arbitrary units
+GG,2-year,24,2,74518.6,ROS,fluorescence arbitrary units
+GG,2-year,24,3,65478.6,ROS,fluorescence arbitrary units
+GG,2-year,24,4,66638.5,ROS,fluorescence arbitrary units
+GG,2-year,24,5,104411.8,ROS,fluorescence arbitrary units
+DD,2-year,24,1,58605.0,ROS,fluorescence arbitrary units
+DD,2-year,24,2,60142.3,ROS,fluorescence arbitrary units
+DD,2-year,24,3,49588.3,ROS,fluorescence arbitrary units
+DD,2-year,24,4,58908.4,ROS,fluorescence arbitrary units
+DD,2-year,24,5,54446.1,ROS,fluorescence arbitrary units
+GD,2-year,24,1,148557.8,ROS,fluorescence arbitrary units
+GD,2-year,24,2,158808.8,ROS,fluorescence arbitrary units
+GD,2-year,24,3,161408.3,ROS,fluorescence arbitrary units
+GD,2-year,24,4,183610.5,ROS,fluorescence arbitrary units
+GD,2-year,24,5,176619.9,ROS,fluorescence arbitrary units
+GG,2-year,48,1,45492.2,ROS,fluorescence arbitrary units
+GG,2-year,48,2,47723.5,ROS,fluorescence arbitrary units
+GG,2-year,48,3,43565.8,ROS,fluorescence arbitrary units
+GG,2-year,48,4,41403.2,ROS,fluorescence arbitrary units
+GG,2-year,48,5,44955.3,ROS,fluorescence arbitrary units
+DD,2-year,48,1,60931.7,ROS,fluorescence arbitrary units
+DD,2-year,48,2,57709.2,ROS,fluorescence arbitrary units
+DD,2-year,48,3,55577.0,ROS,fluorescence arbitrary units
+DD,2-year,48,4,55355.8,ROS,fluorescence arbitrary units
+DD,2-year,48,5,57971.8,ROS,fluorescence arbitrary units
+GD,2-year,48,1,81112.6,ROS,fluorescence arbitrary units
+GD,2-year,48,2,74814.2,ROS,fluorescence arbitrary units
+GD,2-year,48,3,79073.2,ROS,fluorescence arbitrary units
+GD,2-year,48,4,75966.0,ROS,fluorescence arbitrary units
+GD,2-year,48,5,83471.5,ROS,fluorescence arbitrary units
+GG,2-year,96,1,63042.1,ROS,fluorescence arbitrary units
+GG,2-year,96,2,60013.4,ROS,fluorescence arbitrary units
+GG,2-year,96,3,60017.4,ROS,fluorescence arbitrary units
+GG,2-year,96,4,57813.0,ROS,fluorescence arbitrary units
+GG,2-year,96,5,60755.2,ROS,fluorescence arbitrary units
+DD,2-year,96,1,79793.2,ROS,fluorescence arbitrary units
+DD,2-year,96,2,56727.8,ROS,fluorescence arbitrary units
+DD,2-year,96,3,55723.1,ROS,fluorescence arbitrary units
+DD,2-year,96,4,60754.5,ROS,fluorescence arbitrary units
+DD,2-year,96,5,55204.6,ROS,fluorescence arbitrary units
+GD,2-year,96,1,157608.8,ROS,fluorescence arbitrary units
+GD,2-year,96,2,178355.6,ROS,fluorescence arbitrary units
+GD,2-year,96,3,176249.4,ROS,fluorescence arbitrary units
+GD,2-year,96,4,163926.4,ROS,fluorescence arbitrary units
+GD,2-year,96,5,146660.6,ROS,fluorescence arbitrary units
+GG,2-year,168,1,109685.3,ROS,fluorescence arbitrary units
+GG,2-year,168,2,107483.1,ROS,fluorescence arbitrary units
+GG,2-year,168,3,107528.6,ROS,fluorescence arbitrary units
+GG,2-year,168,4,103818.2,ROS,fluorescence arbitrary units
+GG,2-year,168,5,105290.6,ROS,fluorescence arbitrary units
+DD,2-year,168,1,118957.0,ROS,fluorescence arbitrary units
+DD,2-year,168,2,132162.9,ROS,fluorescence arbitrary units
+DD,2-year,168,3,124585.3,ROS,fluorescence arbitrary units
+DD,2-year,168,4,142358.1,ROS,fluorescence arbitrary units
+DD,2-year,168,5,129368.4,ROS,fluorescence arbitrary units
+GD,2-year,168,1,82318.9,ROS,fluorescence arbitrary units
+GD,2-year,168,2,82940.6,ROS,fluorescence arbitrary units
+GD,2-year,168,3,76715.9,ROS,fluorescence arbitrary units
+GD,2-year,168,4,59870.7,ROS,fluorescence arbitrary units
+GD,2-year,168,5,89365.1,ROS,fluorescence arbitrary units

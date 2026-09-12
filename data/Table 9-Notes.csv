@@ -1,0 +1,11 @@
+Supplementary Table 9: RT-qPCR records and interpretation,
+,
+Item,Description
+RNA material,"The authors confirmed that RT-qPCR used the same RNA material as RNA-seq, from digestive gland samples collected at 0 and 24 h. Whether the assays used the same pooled RNA preparations is unresolved."
+Stored sample identifiers,"The retained identifiers are labels in the current processed file. Their mapping to the original laboratory sample identifiers, the 0/24 h time points and the RNA pools has not been recovered."
+Record counts,n_retained_records counts Ct-derived records passing the existing filter within each stored gene–group label. It does not specify the biological sample size at either time point.
+Technical-replicate filter,Ct values were averaged across the three stored technical replicates. A gene–sample record was excluded when the sample standard deviation of the three Ct values exceeded 0.5 cycles.
+Reference calculation,The reference Ct was the arithmetic mean of the passing ACTB and RPL7 Ct values for a stored identifier. One passing reference was used when the other failed the filter: 38 identifiers had two passing references and 8 had one.
+Existing expression scale,"The retained ΔCt equals target Ct minus reference Ct. Existing relative expression is 2^(−ΔΔCt), calibrated to the mean ΔCt of the stored GD-1-year group for each gene. It is not a 24 h versus 0 h fold change."
+Primer design,"Additional transcript matches are predictions from screening the assembly. They are not empirical amplicon-specificity measurements. PRKCD, GSN and ACTB each have one additional predicted transcript match in the final design record."
+Analysis scope,"Figure 8 compares the six-group RT-qPCR profiles descriptively with the corresponding RNA-seq expression at 0 and 24 h, reporting both agreements and differences. The Ct values and existing relative expression are unchanged. Individual Ct records are not assigned to times or RNA pools, and no matched validation or expression–CZTB analysis is included."
