@@ -1,5 +1,5 @@
 {
-  "revision_date": "2026-09-12",
+  "revision_date": "2026-09-13",
   "export": "Current consumed tables only; original cell values preserved in CSV.",
   "tables": [
     {
@@ -120,7 +120,7 @@
       "source_sheet": "Supp_Fig_1B_GO_1yr",
       "rows_including_headers": 257,
       "columns": 9,
-      "sha256": "01760a2295ac2004f9aa97dfc444d17f77573283d4aee837f5df5939a694bbf5"
+      "sha256": "13caa0c49e040c92e143c4dafbec470034962fa18837129b470073726cbf9686"
     },
     {
       "file": "data/Supp_Fig_1B_GO_2yr.csv",
@@ -128,7 +128,7 @@
       "source_sheet": "Supp_Fig_1B_GO_2yr",
       "rows_including_headers": 308,
       "columns": 9,
-      "sha256": "f90c8f102753f42558306dbd755bb98b431a13b01c7b17159256d949b82efe8c"
+      "sha256": "09841d75b1e4f650abc762249e23704c366f51e6fe2bde9b937c322a901a7cd2"
     },
     {
       "file": "data/WGCNA_library_eigengenes.csv",
@@ -240,7 +240,7 @@
       "source_sheet": "Table 9-Notes",
       "rows_including_headers": 11,
       "columns": 2,
-      "sha256": "1c069abebbfce2f0bf021301473facacd1a7c303153354547d6f66a3940a7d45"
+      "sha256": "7b416876f3e1005827be20da3021a675802237bb72b4c9d8a6215cf3502d66d7"
     },
     {
       "file": "data/Table 13.csv",

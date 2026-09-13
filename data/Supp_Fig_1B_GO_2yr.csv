@@ -1,4 +1,4 @@
-"Supplementary Fig. 1B: GO enrichment of OD genes, 2-year",,,,,,,,
+Figure 4F: GO enrichment of two-year-specific OD-high genes,,,,,,,,
 ,,,,,,,,
 GO_ID,Description,Category,target_count,bg_count,fold_enrichment,gene_ratio,pvalue,padj
 GO:0005201,extracellular matrix structural constituent,molecular_function,16,51,4.09228068909967,0.0098099325567136,7.19209814350416e-07,0.0002193589933768

@@ -1,4 +1,4 @@
-"Supplementary Fig. 1B: GO enrichment of OD genes, 1-year",,,,,,,,
+Figure 4F: GO enrichment of one-year-specific OD-high genes,,,,,,,,
 ,,,,,,,,
 GO_ID,Description,Category,target_count,bg_count,fold_enrichment,gene_ratio,pvalue,padj
 GO:0004483,mRNA (nucleoside-2'-O-)-methyltransferase activity,molecular_function,12,31,6.19354838709677,0.0089686098654708,1.56827437984028e-07,3.98341692479431e-05
