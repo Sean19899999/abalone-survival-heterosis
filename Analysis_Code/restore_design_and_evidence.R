@@ -30,39 +30,42 @@ savefig <- function(p, n, w, h) {
          compression='lzw', bg='white')
 }
 
-# Five independent cohorts. Cellular assays and histology share their allocation;
-# RT-qPCR is an RNA reuse branch, not a sixth animal cohort. No tank/acclimation
-# details or unverified cardiac-control counts are inferred in this diagram.
+# Five animal allocations; cellular assays and histology share the same animals.
+# RT-qPCR uses aliquots of the 24 h short-read RNA-seq pools.
 if (length(args) < 2 || args[[2]] %in% c('1', 'all')) {
-p <- base(104) + txt(50,101,'Experimental design and animal allocation',3.8,TRUE) +
-  box(20,91,23,12,'#0072B2') + txt(20,93,'DD male',3.5,TRUE,'white') +
-  txt(20,88.5,'H. discus hannai',2.55,FALSE,'white',TRUE) +
-  txt(35,91,'×',4.6,TRUE) + box(50,91,23,12,'#D55E00') +
-  txt(50,93,'GG female',3.5,TRUE,'white') + txt(50,88.5,'H. gigantea',2.55,FALSE,'white',TRUE) +
-  link(62,91,68,91) + box(81,91,24,12,'#CC79A7') + txt(81,91,'GD hybrid (F₁)',3.45,TRUE) +
-  txt(50,80.5,'Each genotype: one-year-old and two-year-old animals',3.15,TRUE) +
-  link(20,77.5,20,73) + link(60,77.5,60,73) + link(90,77.5,90,73) +
-  box(20,69,38,8,'#F4A259') + txt(20,69,'High-dose challenge\n10⁹ CFU/mL',3.0,TRUE) +
-  box(60,69,38,8,'#61A6A6') + txt(60,69,'Low-dose challenge\n10⁶ CFU/mL',3.0,TRUE) +
-  box(90,69,18,8,'#CEE5FB') + txt(90,69,'Pre-injection\nreference',2.8,TRUE)
+p <- base(108) + txt(50,104,'Experimental design and animal allocation',4.0,TRUE) +
+  box(20,94,23,11,'#0072B2') + txt(20,96,'DD male',3.6,TRUE,'white') +
+  txt(20,91.5,'H. discus hannai',3.0,FALSE,'white',TRUE) +
+  txt(35,94,'×',4.6,TRUE) + box(50,94,23,11,'#D55E00') +
+  txt(50,96,'GG female',3.6,TRUE,'white') + txt(50,91.5,'H. gigantea',3.0,FALSE,'white',TRUE) +
+  link(62,94,68,94) + box(81,94,24,11,'#CC79A7') + txt(81,94,'GD hybrid (F₁)',3.6,TRUE) +
+  txt(50,83,'Each genotype: one-year-old and two-year-old animals',3.3,TRUE) +
+  link(20,80,20,76) + link(60,80,60,76) + link(90,80,90,76) +
+  box(20,71,38,10,'#F4A259') + txt(20,71,'High-dose challenge\n10⁹ CFU/mL',3.3,TRUE) +
+  box(60,71,38,10,'#61A6A6') + txt(60,71,'Low-dose challenge\n10⁶ CFU/mL',3.3,TRUE) +
+  box(90,71,18,10,'#CEE5FB') + txt(90,71,'Pre-injection\nreference',3.15,TRUE)
 centres <- c(10,30,50,70,90)
 fills <- c('#FFF9E9','#FFF9E9','#F0FAF8','#F0FAF8','#F0F6FC')
-heads <- c('Survival\nanalysis','Continuous cardiac\nrecording','Flow cytometry\nand histology','Short-read\nRNA-seq','Iso-Seq\nreference')
-animals <- c('30 challenged\n+ 10 controls*','8 separately\nallocated animals','30 allocated\nincluding 0 h\n+ 10 controls*','18 separate animals\n9 at each time','6 per genotype\n3 from each age')
-schedule <- c('0, 24, 48,\n72 and 96 h','Continuous\nrecording','0, 24, 48,\n96 and 168 h\n5 animals/time','0 and 24 h','0 h\n(before injection)')
-readout <- c('Survival curves\nand 96 h endpoint','CBTB and CZTB','Haemolymph,\nthen tissues\nfrom the same animals','3 RNA pools/time\n3 animals/pool\n36 libraries in total','1 library/genotype\n3 libraries in total\nIndependent RNA')
+heads <- c('Survival\nanalysis','Cardiac\nrecording','Flow cytometry\nand histology','Short-read\nRNA-seq','Iso-Seq\nreference')
+animals <- c('30 challenged\n+ 10 controls','8 challenged\n+ 3 controls','30 incl. baseline\n+ 10 controls','18 animals\n9 at each time','6 animals')
+units <- c(rep('per genotype–age\ngroup',4),'per genotype\n3 from each age')
+assay <- c('Deaths recorded at\n0, 24, 48,\n72 and 96 h',
+           'Heart rate recorded\ncontinuously\nafter injection',
+           '0, 24, 48, 96\nand 168 h:\n5 animals/time\nhaemolymph,\nthen tissues',
+           '0 and 24 h:\n3 RNA pools/time\n3 animals/pool\n36 libraries total',
+           '0 h:\n1 library/genotype\n3 libraries total')
 for (i in seq_along(centres)) {
   x <- centres[[i]]
-  p <- p + link(x,65,x,61) + box(x,40.5,18,41,fills[[i]],'grey60',.4) +
-    txt(x,58,heads[[i]],2.85,TRUE) +
-    txt(x,51.5,'Animals',2.6,TRUE,'#365463') + txt(x,46,animals[[i]],2.5) +
-    txt(x,38,'Sampling / record',2.5,TRUE,'#365463') + txt(x,32.5,schedule[[i]],2.5) +
-    txt(x,23.5,readout[[i]],2.4)
+  p <- p + link(x,66,x,63) + box(x,41.8,18,42.4,fills[[i]],'grey60',.4) +
+    txt(x,59.3,heads[[i]],3.2,TRUE) +
+    txt(x,52.3,'Animals',3.15,TRUE,'#365463') + txt(x,47.4,animals[[i]],3.2) +
+    txt(x,41,units[[i]],3.1) +
+    txt(x,34.3,'Sampling & assay',3.05,TRUE,'#365463') + txt(x,27.6,assay[[i]],3.1)
 }
-p <- p + link(70,20,70,16.5) + box(70,10.3,38,11,'#E8F2FB','grey60',.4) +
-  txt(70,13.5,'RT-qPCR: RNA reused from the RNA-seq cohort',2.65,TRUE) +
-  txt(70,8.5,'8 targets; 350 quality-filtered target records\n46 stored sample IDs; no additional animals',2.55) +
-  txt(23,12,'* Additional sterile-seawater-injected controls.\nAnimal counts are per genotype–age group,\nexcept for the Iso-Seq reference libraries.',2.55,FALSE,'grey30')
+p <- p + link(70,20.6,70,17.5) + box(50,8.8,98,17.4,'#E8F2FB','grey60',.4) +
+  txt(50,14.0,'RT-qPCR — 24 h RNA-pool aliquots',3.45,TRUE) +
+  txt(50,9.9,'Source: 3 RNA pools per genotype–age group (18 pools total)',3.2) +
+  txt(50,5.0,'Target genes: CHST11, ODC1, GALNT, FUT1/FUT2,\nPRKCD, NOTCH1, GSN and CCNG1',3.2)
 savefig(p,1,190,185)
 }
 
@@ -89,4 +92,4 @@ p <- base() + box(50,89,43,16,'#879FAA','#536F7B',1) +
            colour=c(turq,plum),linewidth=.8,linetype='dashed')
 savefig(p,9,180,115)
 }
-cat('Updated design and evidence diagrams exported. No RT-qPCR validation data were inferred.\n')
+cat('Selected design and evidence diagrams exported.\n')

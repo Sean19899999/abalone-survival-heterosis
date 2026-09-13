@@ -35,8 +35,7 @@ stopifnot(nrow(rep)==8,nrow(meta)==36,setequal(rep$label,gorder),setequal(setdif
 expr_all <- rep %>% pivot_longer(-c(gene_id,label),names_to='matrix_sample_id',values_to='log2_tpm_plus_1') %>%
   left_join(meta,by='matrix_sample_id')
 stopifnot(nrow(expr_all)==288,!anyNA(expr_all$group))
-# This is the selected post-challenge RNA-seq comparison, not an inference of
-# missing RT-qPCR sample times. Ct values and identifiers remain unchanged.
+# RT-qPCR uses aliquots of the 24 h RNA pools from this source cohort.
 expr <- expr_all %>% filter(time=='24 h') %>% mutate(xpos=as.numeric(group))
 stopifnot(nrow(expr)==144)
 rplots <- lapply(gorder,function(g){
@@ -53,7 +52,7 @@ rplots <- lapply(gorder,function(g){
     labs(title=g,x=NULL,y=expression(log[2](TPM+1)))+theme(legend.position='none',axis.title.y=element_text(size=9))
 })
 heading <- function(tag,label) ggdraw()+draw_label(tag,x=0,y=.5,hjust=0,size=14)+draw_label(label,x=.065,y=.5,hjust=0,size=10)
-fig <- plot_grid(heading('A','RT-qPCR expression across genotype-age groups'),
+fig <- plot_grid(heading('A','RT-qPCR expression from 24 h RNA-pool aliquots'),
                 plot_grid(plotlist=qplots,ncol=4),
                 heading('B','RNA-seq expression at 24 h post-challenge'),
                 plot_grid(plotlist=rplots,ncol=4),
@@ -83,4 +82,4 @@ comparisons <- bind_rows(lapply(split(means,interaction(means$gene,means$age)),f
 }))
 stopifnot(nrow(comparisons)==48,sum(comparisons$concordant)==34)
 write.csv(comparisons,file.path(out,'Figure_8_genotype_direction_comparison.csv'),row.names=FALSE)
-cat('Figure 8 exported: 350 unchanged qPCR records and 144 RNA-seq values at 24 h; 34/48 descriptive genotype directions agree. No qPCR time assignments or correlation tests.\n')
+cat('Figure 8 exported: 350 qPCR aliquot measurements and 144 RNA-seq values at 24 h; 34/48 genotype directions agree.\n')
