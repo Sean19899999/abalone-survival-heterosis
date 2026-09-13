@@ -9,7 +9,7 @@ gorder <- c('PRKCD','NOTCH1','GSN','CCNG1','CHST11','ODC1','GALNT','FUT1/2')
 groups <- c('DD-1-year','DD-2-year','GD-1-year','GD-2-year','GG-1-year','GG-2-year')
 glab <- c('DD\n1y','DD\n2y','GD\n1y','GD\n2y','GG\n1y','GG\n2y')
 theme_set(theme_bw(8)+theme(text=element_text(family='sans'), panel.grid=element_blank(),
- axis.text=element_text(size=6), axis.title=element_text(size=7),
+ axis.text=element_text(size=6), axis.title=element_text(size=8),
  plot.title=element_text(size=8,hjust=.5), plot.margin=margin(5,3,3,3),
  legend.title=element_blank(), legend.text=element_text(size=8)))
 qp <- read_sheet(wb,sheet='Current_RTqPCR_Observations')
@@ -32,35 +32,55 @@ meta <- read_sheet(wb,sheet='WGCNA_library_eigengenes') %>% select(sample_id,age
         group=factor(paste(genotype,age,sep='-'),levels=groups))
 rep <- read_sheet(wb,sheet='Representative_expression')
 stopifnot(nrow(rep)==8,nrow(meta)==36,setequal(rep$label,gorder),setequal(setdiff(names(rep),c('gene_id','label')),meta$matrix_sample_id))
-expr <- rep %>% pivot_longer(-c(gene_id,label),names_to='matrix_sample_id',values_to='log2_tpm_plus_1') %>%
-  left_join(meta,by='matrix_sample_id') %>% mutate(xpos=as.numeric(group)+ifelse(time=='0 h',-.12,.12))
-stopifnot(nrow(expr)==288,!anyNA(expr$group))
+expr_all <- rep %>% pivot_longer(-c(gene_id,label),names_to='matrix_sample_id',values_to='log2_tpm_plus_1') %>%
+  left_join(meta,by='matrix_sample_id')
+stopifnot(nrow(expr_all)==288,!anyNA(expr_all$group))
+# This is the selected post-challenge RNA-seq comparison, not an inference of
+# missing RT-qPCR sample times. Ct values and identifiers remain unchanged.
+expr <- expr_all %>% filter(time=='24 h') %>% mutate(xpos=as.numeric(group))
+stopifnot(nrow(expr)==144)
 rplots <- lapply(gorder,function(g){
   z <- filter(expr,label==g)
   sm <- z %>% group_by(group,genotype,time,xpos) %>% summarise(m=mean(log2_tpm_plus_1),s=sd(log2_tpm_plus_1),n=n(),.groups='drop')
   stopifnot(all(sm$n==3))
-  ggplot(z,aes(xpos,log2_tpm_plus_1,colour=genotype,shape=time))+
+  ggplot(z,aes(xpos,log2_tpm_plus_1,colour=genotype))+
     geom_point(position=position_jitter(width=.04,height=0,seed=123),size=1.25,alpha=.65,stroke=.45)+
     geom_errorbar(data=sm,aes(y=m,ymin=m-s,ymax=m+s),width=.13,linewidth=.35,alpha=.9)+
     geom_point(data=sm,aes(y=m),size=1.8,stroke=.6)+
-    scale_colour_manual(values=pal,guide='none')+scale_shape_manual(values=c('0 h'=1,'24 h'=16))+
+    scale_colour_manual(values=pal,guide='none')+
     scale_x_continuous(breaks=1:6,labels=glab,limits=c(.5,6.5))+
     scale_y_continuous(expand=expansion(mult=c(.02,.10)))+
-    labs(title=g,x=NULL,y=expression(log[2](TPM+1)))+theme(legend.position='none')
+    labs(title=g,x=NULL,y=expression(log[2](TPM+1)))+theme(legend.position='none',axis.title.y=element_text(size=9))
 })
-legendplot <- rplots[[1]]+theme(legend.position='bottom')+guides(shape=guide_legend(override.aes=list(colour='black',alpha=1,size=2.4)))
-leg <- get_legend(legendplot)
 heading <- function(tag,label) ggdraw()+draw_label(tag,x=0,y=.5,hjust=0,size=14)+draw_label(label,x=.065,y=.5,hjust=0,size=10)
 fig <- plot_grid(heading('A','RT-qPCR expression across genotype-age groups'),
                 plot_grid(plotlist=qplots,ncol=4),
-                heading('B','RNA-seq expression at 0 h and 24 h'),
-                plot_grid(plotlist=rplots,ncol=4),leg,
-                ncol=1,rel_heights=c(.16,2,.16,2,.16))
+                heading('B','RNA-seq expression at 24 h post-challenge'),
+                plot_grid(plotlist=rplots,ncol=4),
+                ncol=1,rel_heights=c(.16,2,.16,2))
 for(ext in c('png','pdf','tiff')){
-  dev <- switch(ext,png=ragg::agg_png,pdf=cairo_pdf,tiff=ragg::agg_tiff)
-  if(ext=='tiff')ggsave(file.path(out,paste0('Figure_8_revised.',ext)),fig,width=180,height=240,units='mm',dpi=600,device=dev,compression='lzw',bg='white')
-  else ggsave(file.path(out,paste0('Figure_8_revised.',ext)),fig,width=180,height=240,units='mm',dpi=600,device=dev,bg='white')
+  dev <- switch(ext,png=ragg::agg_png,pdf=grDevices::cairo_pdf,tiff=ragg::agg_tiff)
+  if(ext=='tiff')ggsave(file.path(out,paste0('Figure_8_revised.',ext)),fig,width=180,height=210,units='mm',dpi=600,device=dev,compression='lzw',bg='white')
+  else ggsave(file.path(out,paste0('Figure_8_revised.',ext)),fig,width=180,height=210,units='mm',dpi=600,device=dev,bg='white')
 }
-ggsave(file.path(out,'Figure_8_revised_preview.png'),fig,width=180,height=240,units='mm',dpi=180,device=ragg::agg_png,bg='white')
+ggsave(file.path(out,'Figure_8_revised_preview.png'),fig,width=180,height=210,units='mm',dpi=180,device=ragg::agg_png,bg='white')
+ggsave(file.path(out,'Figure_8_revised.svg'),fig,width=180,height=210,units='mm',device=svglite::svglite,bg='white')
 write.csv(expr %>% select(gene_id,label,sample_id,age,genotype,time,group,log2_tpm_plus_1),file.path(out,'Figure_8_RNAseq_source.csv'),row.names=FALSE)
-cat('Figure 8 exported: 350 unchanged qPCR records and 288 RNA-seq feature-library values. No qPCR time assignments or correlation tests.\n')
+# All three genotype pairs are fixed before summarising the agreement. These
+# comparisons are descriptive and are not independent biological replicates.
+qm <- qp %>% group_by(gene,age,genotype) %>% summarise(qpcr=mean(relative_expression),.groups='drop')
+rm <- expr %>% group_by(label,age,genotype) %>% summarise(rnaseq=mean(log2_tpm_plus_1),.groups='drop') %>% rename(gene=label)
+means <- left_join(qm,rm,by=c('gene','age','genotype'))
+stopifnot(nrow(means)==48,!anyNA(means$rnaseq))
+comparisons <- bind_rows(lapply(split(means,interaction(means$gene,means$age)),function(z){
+  pairs <- combn(c('DD','GD','GG'),2)
+  bind_rows(lapply(seq_len(ncol(pairs)),function(i){
+    a <- z[z$genotype==pairs[1,i],]; b <- z[z$genotype==pairs[2,i],]
+    data.frame(gene=a$gene,age=a$age,pair=paste(pairs[,i],collapse='-'),
+               qpcr_difference=a$qpcr-b$qpcr,rnaseq_24h_difference=a$rnaseq-b$rnaseq,
+               concordant=sign(a$qpcr-b$qpcr)==sign(a$rnaseq-b$rnaseq))
+  }))
+}))
+stopifnot(nrow(comparisons)==48,sum(comparisons$concordant)==34)
+write.csv(comparisons,file.path(out,'Figure_8_genotype_direction_comparison.csv'),row.names=FALSE)
+cat('Figure 8 exported: 350 unchanged qPCR records and 144 RNA-seq values at 24 h; 34/48 descriptive genotype directions agree. No qPCR time assignments or correlation tests.\n')

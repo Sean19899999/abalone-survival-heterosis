@@ -1,6 +1,6 @@
-# Age-class-dependent survival heterosis in hybrid abalone
+# Physiological and transcriptomic features of hybrid abalone survival heterosis
 
-Analysis code and processed data accompanying the September 2026 revision of **Age-class-dependent survival heterosis in hybrid abalone challenged with Vibrio harveyi**.
+Analysis code and processed data accompanying the September 2026 revision of **Physiological and transcriptomic features of age-class-dependent survival heterosis in hybrid abalone challenged with Vibrio harveyi**.
 
 The study compares *Haliotis gigantea* (GG), *H. discus hannai* (DD), and the female GG × male DD hybrid (GD) at one and two years of age. This release reproduces the reported analyses and figures from processed data. It is not a reconstruction of the raw sequencing or instrument-processing pipelines.
 
@@ -14,7 +14,7 @@ Earlier analysis versions, unused historical workbook sheets, reviewer correspon
 
 ## Reproduce the results
 
-Run the commands from the repository root. The Python scripts require NumPy, pandas, SciPy, openpyxl and Matplotlib. The R scripts require ggplot2, dplyr, tidyr, readr, readxl, patchwork, cowplot, magick and ragg. The R PDF device requires Cairo support.
+Run the commands from the repository root. The Python scripts require NumPy, pandas, SciPy, openpyxl and Matplotlib. The R scripts require ggplot2, dplyr, tidyr, readr, readxl, patchwork, cowplot, magick, ragg and svglite. The R PDF device requires Cairo support.
 
 ```bash
 python Analysis_Code/recompute_current.py
@@ -31,11 +31,11 @@ The filename in the final command identifies the logical source workbook. When t
 
 ## Interpretation of the data
 
-Survival contrasts use three independently supplied tanks per genotype–age group. Cardiac measurements are supplied as six group means; the cardiac resilience index is a descriptive principal-component summary, not a tank-level significance test. Low-dose cellular and histological time courses use different animals at successive times. Their trajectory integrals are descriptive group summaries.
+Survival contrasts use three independently supplied tanks per genotype–age group. Cardiac measurements are supplied as six group means; Figure 2F directly displays their descriptive principal-component cardiac resilience scores, not a tank-level significance test. Both CBTB and CZTB are measured from injection: CZTB is the total time to cardiac arrest, not the interval after CBTB. Low-dose cellular and histological time courses use different animals at successive times. Their trajectory integrals are descriptive group summaries.
 
 RNA-seq expression is represented by 36 libraries, each prepared from a three-animal RNA pool. Module–trait comparisons use six genotype–age means, with unrestricted and age-stratified permutation references and correction across 246 comparisons. They do not pair transcriptomic and cardiac animals.
 
-The RT-qPCR data contain 350 quality-filtered target records across 46 stored sample identifiers. Technical triplicates were averaged, and relative expression was calibrated to the gene-specific mean ΔCt of one-year-old GD. The identifier-to-time and RNA-pool assignments are unavailable. Accordingly, Figure 8 displays genotype–age RT-qPCR profiles beside the corresponding RNA-seq expression at 0 and 24 h, including both concordant and discordant patterns. This is a descriptive comparison, not time-matched validation. No individual RT-qPCR–cardiac association or inferred biological sample count is included. Additional primer matches are computational predictions, not empirical amplicon-specificity measurements.
+The RT-qPCR data contain 350 quality-filtered target records across 46 stored sample identifiers. Technical triplicates were averaged, and relative expression was calibrated to the gene-specific mean ΔCt of one-year-old GD. The identifier-to-time and RNA-pool assignments are unavailable. Figure 8 displays these genotype–age RT-qPCR profiles beside the 24 h post-challenge RNA-seq profiles. Across all eight genes, two age classes and three genotype pairs, 34 of 48 descriptive genotype directions agree (15/16 for GD–GG, 14/16 for DD–GG and 5/16 for DD–GD). The script exports every pairwise comparison as `Figure_8_genotype_direction_comparison.csv`. These comparisons are not independent biological replicates. Selection of the post-challenge RNA-seq display does not recover or prove the missing RT-qPCR sampling times; this remains a descriptive comparison, not verified time-matched validation. No individual RT-qPCR–cardiac association or inferred biological sample count is included. Additional primer matches are computational predictions, not empirical amplicon-specificity measurements.
 
 The cardiac trace in Figure 2E is explicitly schematic and illustrates endpoint definitions; it is not an observed heart-rate recording. Histological images are preserved source panels. Lesion-positive proportions are reported descriptively because the underlying positive and total scoring counts are unavailable.
 

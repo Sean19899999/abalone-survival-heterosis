@@ -21,18 +21,23 @@ heart_bar <- function(metric,label) ggplot(heart,aes(genotype,.data[[metric]],fi
 pB <- heart_bar('CBTB_min','CBTB (min)');pD <- heart_bar('CZTB_min','CZTB (min)')
 ss <- surv %>% group_by(age,genotype) %>% summarise(mean=mean(s96),SEM=sd(s96)/sqrt(n()),.groups='drop')
 pC <- ggplot(ss,aes(genotype,mean,fill=genotype))+geom_col(width=.65,alpha=.85)+geom_errorbar(aes(ymin=pmax(0,mean-SEM),ymax=mean+SEM),width=.2,linewidth=.35)+geom_point(data=surv,aes(y=s96),position=position_jitter(width=.1,height=0,seed=24),colour='grey25',alpha=.7,size=1.3)+facet_wrap(~age)+scale_fill_manual(values=col_genotype,guide='none')+geom_text(data=cts,aes(x=2,y=y,label=label),inherit.aes=FALSE,size=2.5,fontface='italic')+scale_y_continuous(limits=c(0,80),breaks=seq(0,80,20))+labs(x='Genotype',y='Survival rate at 96 h (%)')
-# 仅示意定义，不属于实验测量值；保留原灰色曲线/红蓝垂线体系。
+# Schematic demonstration only, not experimental measurements. Preserve the
+# established grey curve and red/blue endpoint markers.
 set.seed(42); tt<-seq(0,1500,5); bpm<-pmax(0,ifelse(tt<=600,82,ifelse(tt<1100,82*(1100-tt)/500,2))+rnorm(length(tt),0,2))
 pE<-ggplot(data.frame(tt,bpm),aes(tt,bpm))+geom_line(colour='grey40',linewidth=.4)+geom_vline(xintercept=600,linetype='dashed',colour='#E41A1C',linewidth=.6)+geom_vline(xintercept=1100,linetype='dashed',colour='#377EB8',linewidth=.6)+annotate('text',x=600,y=97,label='CBTB',colour='#E41A1C',fontface='bold',size=3)+annotate('text',x=1230,y=16,label='CZTB',colour='#377EB8',fontface='bold',size=3)+scale_x_continuous(breaks=seq(0,1500,500))+scale_y_continuous(limits=c(0,102),breaks=seq(0,100,25))+labs(x='Time post-injection (min)',y='Heart rate (BPM)')
-pF<-ggplot(heart,aes(CBTB_min,CZTB_min,colour=age,shape=genotype))+geom_point(size=3)+scale_colour_manual(values=col_age,name='Age')+scale_shape_manual(values=c(DD=16,GG=17,GD=15),name='Genotype')+labs(x='CBTB (min)',y='CZTB (min)')+theme(legend.position='right')
+pri <- read_sheet(wb,sheet='Current_PRI_H_Descriptive') %>% format_group()
+stopifnot(nrow(pri)==6)
+pF<-ggplot(pri,aes(genotype,PRI_H,colour=genotype))+geom_hline(yintercept=0,colour='grey65',linetype='dashed',linewidth=.35)+geom_point(size=3)+facet_wrap(~age)+scale_colour_manual(values=col_genotype,guide='none')+labs(x='Genotype',y=expression('Descriptive PRI'[H]))+theme(axis.title.y=element_text(size=9))
 fig2<-wrap_plots(pA,pB,pC,pD,pE,pF,ncol=2)+plot_annotation(tag_levels='A')&theme(plot.tag=element_text(size=15,face='plain'),plot.tag.position=c(0,1))
 save_figure<-function(fig,name,w,h){
- ggsave(file.path(fig_dir,paste0(name,'.pdf')),fig,width=w,height=h,units='mm',device=cairo_pdf,bg='white')
+ ggsave(file.path(fig_dir,paste0(name,'.pdf')),fig,width=w,height=h,units='mm',device=grDevices::cairo_pdf,bg='white')
+ ggsave(file.path(fig_dir,paste0(name,'.svg')),fig,width=w,height=h,units='mm',device=svglite::svglite,bg='white')
  ggsave(file.path(fig_dir,paste0(name,'.png')),fig,width=w,height=h,units='mm',dpi=600,device=ragg::agg_png,bg='white')
  ggsave(file.path(fig_dir,paste0(name,'.tiff')),fig,width=w,height=h,units='mm',dpi=600,device=ragg::agg_tiff,compression='lzw',bg='white')
  ggsave(file.path(fig_dir,paste0(name,'_preview.png')),fig,width=w,height=h,units='mm',dpi=180,device=ragg::agg_png,bg='white')
 }
 save_figure(fig2,'Figure_2_revised',180,190)
+if (length(args) > 1 && args[[2]] == '2') quit(save='no', status=0)
 
 flow<-read_sheet(wb,sheet='Current_Flow_Summary')%>%mutate(Genotype=factor(Genotype,levels=c('DD','GG','GD')),Age=factor(Age,levels=ages))
 flow_plot<-function(metric,label,scale=1) ggplot(filter(flow,measure==metric),aes(Time,mean/scale,colour=Genotype,linetype=Age,group=interaction(Genotype,Age)))+geom_line(linewidth=.6)+geom_point(size=1.5)+geom_errorbar(aes(ymin=pmax(0,(mean-SEM)/scale),ymax=(mean+SEM)/scale),width=5,linewidth=.25,alpha=.7)+scale_colour_manual(values=col_genotype,name='Genotype')+scale_linetype_manual(values=c('1-year'='solid','2-year'='dashed'),name='Age')+scale_x_continuous(breaks=c(0,24,48,96,168))+labs(x='Time (h)',y=label)+theme(legend.position='none')
