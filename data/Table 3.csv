@@ -1,0 +1,13 @@
+Supplementary Table 3: Plum module hub gene identity,,,,,
+,,,,,
+Hub_label,Transcript_ID,Short_ID,Functional_category,kME,bootstrap_frequency
+Unk_1 (kME=0.83),transcript_HQ_Ss_transcript11971/f8p0/4020,T11971/f8p0/4020,Other,0.828034535845787,95
+Unk_2 (kME=0.80),transcript_HQ_Ss_transcript2964/f2p0/5920,T2964/f2p0/5920,Other,0.796240057646908,93
+Unk_3 (kME=0.73),transcript_HQ_Sd_transcript16032/f5p0/1473,T16032/f5p0/1473,Other,0.732816453626052,81
+PRKCD (kME=0.73),transcript_HQ_Sd_transcript2472/f3p0/3883,T2472/f3p0/3883,Immune signaling,0.728050608785018,73
+Unk_4 (kME=0.71),transcript_HQ_Sd_transcript16915/f4p0/1244,T16915/f4p0/1244,Other,0.711595051001274,70
+NOTCH1 (kME=0.70),transcript_HQ_Ss_transcript19865/f2p0/2966,T19865/f2p0/2966,Signaling,0.702796997905649,57
+Unk_5 (kME=0.70),transcript_HQ_Sd_transcript11188/f4p0/2297,T11188/f4p0/2297,Other,0.700230438658177,63
+Unk_6 (kME=0.67),transcript_HQ_Ss_transcript6148/f2p0/5022,T6148/f2p0/5022,Other,0.671432885688842,43
+UBQLN (kME=0.67),transcript_HQ_Sd_transcript5403/f3p0/3199,T5403/f3p0/3199,Ubiquitin/ER,0.668191085452696,32
+Unk_7 (kME=0.66),transcript_HQ_Sd_transcript18570/f3p0/555,T18570/f3p0/555,Other,0.664557368718961,40

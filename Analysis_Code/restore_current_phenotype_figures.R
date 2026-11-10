@@ -1,5 +1,6 @@
 args <- commandArgs(trailingOnly=TRUE)
 root <- args[[1]]
+no_pdf <- Sys.getenv('FIG_NO_PDF')=='1'; if (no_pdf) options(device=function(...) grDevices::pdf(file=NULL, ...))
 dest <- root
 wb <- file.path(dest, 'Source_Data_Revised.xlsx')
 fig_dir <- file.path(dest, 'Analysis_Code/figure_outputs')
@@ -30,7 +31,7 @@ stopifnot(nrow(pri)==6)
 pF<-ggplot(pri,aes(genotype,PRI_H,colour=genotype))+geom_hline(yintercept=0,colour='grey65',linetype='dashed',linewidth=.35)+geom_point(size=3)+facet_wrap(~age)+scale_colour_manual(values=col_genotype,guide='none')+labs(x='Genotype',y=expression('Descriptive PRI'[H]))+theme(axis.title.y=element_text(size=9))
 fig2<-wrap_plots(pA,pB,pC,pD,pE,pF,ncol=2)+plot_annotation(tag_levels='A')&theme(plot.tag=element_text(size=15,face='plain'),plot.tag.position=c(0,1))
 save_figure<-function(fig,name,w,h){
- ggsave(file.path(fig_dir,paste0(name,'.pdf')),fig,width=w,height=h,units='mm',device=grDevices::cairo_pdf,bg='white')
+ if(!no_pdf)ggsave(file.path(fig_dir,paste0(name,'.pdf')),fig,width=w,height=h,units='mm',device=grDevices::cairo_pdf,bg='white')
  ggsave(file.path(fig_dir,paste0(name,'.svg')),fig,width=w,height=h,units='mm',device=svglite::svglite,bg='white')
  ggsave(file.path(fig_dir,paste0(name,'.png')),fig,width=w,height=h,units='mm',dpi=600,device=ragg::agg_png,bg='white')
  ggsave(file.path(fig_dir,paste0(name,'.tiff')),fig,width=w,height=h,units='mm',dpi=600,device=ragg::agg_tiff,compression='lzw',bg='white')
@@ -42,7 +43,8 @@ if (length(args) > 1 && args[[2]] == '2') quit(save='no', status=0)
 flow<-read_sheet(wb,sheet='Current_Flow_Summary')%>%mutate(Genotype=factor(Genotype,levels=c('DD','GG','GD')),Age=factor(Age,levels=ages))
 flow_plot<-function(metric,label,scale=1) ggplot(filter(flow,measure==metric),aes(Time,mean/scale,colour=Genotype,linetype=Age,group=interaction(Genotype,Age)))+geom_line(linewidth=.6)+geom_point(size=1.5)+geom_errorbar(aes(ymin=pmax(0,(mean-SEM)/scale),ymax=(mean+SEM)/scale),width=5,linewidth=.25,alpha=.7)+scale_colour_manual(values=col_genotype,name='Genotype')+scale_linetype_manual(values=c('1-year'='solid','2-year'='dashed'),name='Age')+scale_x_continuous(breaks=c(0,24,48,96,168))+labs(x='Time (h)',y=label)+theme(legend.position='none')
 fA<-flow_plot('THC','THC (fold of baseline)');fB<-flow_plot('MOR','Haemocyte mortality (%)');fC<-flow_plot('PHA','Phagocytosis (%)');fD<-flow_plot('ROS',expression('ROS ('*10^6*' fluorescence a.u.)'),1e6)
-# 原稿组织学面板保持连续图像、配色、顺序、标尺；只裁掉其他统计面板。
+# 原稿组织学面板保持连续图像、配色、顺序；二轮按显微镜原标尺换算重画了带数值的标尺
+# （redraw_histology_scalebars.py，源图 histology_panels_EF_source.png）；只裁掉其他统计面板。
 cached_hist<-file.path(root,'Analysis_Code/figure_inputs/histology_panels_EF.png')
 if(file.exists(cached_hist)) hist<-image_read(cached_hist) else {
  orig<-image_read(file.path(root,'Analysis_Code/figure_inputs/image3.tif'))

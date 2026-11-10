@@ -5,3 +5,6 @@ Analysis_Code/figure_outputs/
 .venv/
 *.docx
 *.xlsx
+Rplots.pdf
+Analysis_Code/figure_inputs/*_scalebars.png
+Analysis_Code/figure_inputs/*_draft.json
