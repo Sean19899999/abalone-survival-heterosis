@@ -19,7 +19,11 @@ Image.MAX_IMAGE_PIXELS = None
 spec_path, arrows_path, out_dir = sys.argv[1:4]
 review = "--review" in sys.argv
 spec = json.load(open(spec_path, encoding="utf-8"))
-arrows = json.load(open(arrows_path, encoding="utf-8"))["arrows"]
+_aj = json.load(open(arrows_path, encoding="utf-8"))
+arrows = _aj["arrows"]
+# arrow length as a fraction of the tile width, and white outline width (defaults = first-revision sizes)
+STYLE = {"fig3_len_frac": None, "s6_len_frac": .115, "fig3_outline": 2, "s6_outline": 3}
+STYLE.update(_aj.get("style", {}))
 fig3_job, s6a_job, s6b_job = spec["jobs"]
 os.makedirs(out_dir, exist_ok=True)
 FONT_B = "/usr/share/fonts/truetype/noto/NotoSans-Bold.ttf"
@@ -36,13 +40,20 @@ def arrow_poly(tip, tail, L):
             (tx, ty), (neck[0] - nx * hw, neck[1] - ny * hw), (neck[0] - nx * sw, neck[1] - ny * sw), (tail[0] - nx * sw, tail[1] - ny * sw)]
 
 
-def place(tile, frac, L, forced=None):
+def free(tile, tail):
+    x0, y0, x1, y1 = tile; w, h = x1 - x0 + 1, y1 - y0 + 1
+    fx, fy = (tail[0] - x0) / w, (tail[1] - y0) / h
+    return .03 < fx < .97 and .03 < fy < .97 and not (fx > .55 and fy > .70)
+
+
+def place(tile, frac, L, forced=None, also=None):
+    """Tip at the fractional position; first direction whose tail stays inside the tile and away from the
+    bottom-right scale bar. `also(direction)` can veto a direction (used to check the Figure 3 copy)."""
     x0, y0, x1, y1 = tile; w, h = x1 - x0 + 1, y1 - y0 + 1
     tip = (x0 + frac[0] * w, y0 + frac[1] * h)
     for dx, dy in ([forced] if forced else DIRS):
         n = math.hypot(dx, dy); tail = (tip[0] + dx / n * L, tip[1] + dy / n * L)
-        fx, fy = (tail[0] - x0) / w, (tail[1] - y0) / h
-        if .03 < fx < .97 and .03 < fy < .97 and not (fx > .55 and fy > .70):
+        if free(tile, tail) and (also is None or also((dx, dy))):
             return tip, tail, (dx, dy)
     raise ValueError(f"no free direction for arrow at {frac}")
 
@@ -79,17 +90,22 @@ for ar in arrows:
     i3 = base + r * 4 + c + 1
     t3 = fig3_job["tiles"][i3]
     corr, sx, sy = align(fig3, t3, img6, t6)
-    L6 = .115 * (t6[2] - t6[0] + 1)
-    tip6, tail6, dirv = place(t6, ar["tip"], L6, tuple(ar["dir"]) if ar.get("dir") else None)
-    draw_arrow(ImageDraw.Draw(s6_out[ar["age"]]), tip6, tail6, L6, 3)
-    # Figure 3: same fractional position, corrected by the matched shift
     w3, h3 = t3[2] - t3[0] + 1, t3[3] - t3[1] + 1
     w6, h6 = t6[2] - t6[0] + 1, t6[3] - t6[1] + 1
     k = w3 / w6
-    tip3 = (t3[0] + (tip6[0] - t6[0]) * k + sx, t3[1] + (tip6[1] - t6[1]) * k + sy)
-    L3 = L6 * k
+    L6 = STYLE["s6_len_frac"] * w6
+    L3 = STYLE["fig3_len_frac"] * w3 if STYLE["fig3_len_frac"] else L6 * k
+    # Figure 3: same fractional position, corrected by the matched shift
+    tip3 = (t3[0] + ar["tip"][0] * w6 * k + sx, t3[1] + ar["tip"][1] * h6 * k + sy)
+
+    def fig3_ok(dv):
+        n = math.hypot(*dv)
+        return free(t3, (tip3[0] + dv[0] / n * L3, tip3[1] + dv[1] / n * L3))
+
+    tip6, tail6, dirv = place(t6, ar["tip"], L6, tuple(ar["dir"]) if ar.get("dir") else None, fig3_ok)
+    draw_arrow(ImageDraw.Draw(s6_out[ar["age"]]), tip6, tail6, L6, STYLE["s6_outline"])
     n = math.hypot(*dirv); tail3 = (tip3[0] + dirv[0] / n * L3, tip3[1] + dirv[1] / n * L3)
-    draw_arrow(d3, tip3, tail3, L3, 2)
+    draw_arrow(d3, tip3, tail3, L3, STYLE["fig3_outline"])
     placed.append({"id": ar["id"], "fig3_tile": i3, "align_corr": round(float(corr), 3), "shift_px": [sx, sy],
                    "s6_tip": [round(v) for v in tip6], "s6_tail": [round(v) for v in tail6], "fig3_tip": [round(v) for v in tip3]})
     print(f"arrow {ar['id']:2d} {ar['age']} {ar['tissue']:15s} {ar['genotype']} S6 tile {ar['s6_tile']:2d} -> Fig3 tile {i3:2d}  match r={corr:.3f} shift=({sx},{sy})")

@@ -21,10 +21,11 @@ python Analysis_Code/recompute_current.py
 python Analysis_Code/recompute_plum_interaction.py
 python Analysis_Code/redraw_apa_supplement.py
 
-# Histology panels (Figure 3E-F, Supplementary Figure 6A-B): scale bars, then lesion arrows
+# Histology panels (Figure 3E-F, Supplementary Figure 6A-B): scale bars, lesion arrows, then row and column labels
 python Analysis_Code/redraw_histology_scalebars.py Analysis_Code/figure_inputs/histology_scalebar_spec.json
 python Analysis_Code/draw_histology_arrows.py Analysis_Code/figure_inputs/histology_scalebar_spec.json Analysis_Code/figure_inputs/histology_arrows.json Analysis_Code/figure_outputs/histology
-cp Analysis_Code/figure_outputs/histology/histology_panels_EF_arrows.png Analysis_Code/figure_inputs/histology_panels_EF.png
+python Analysis_Code/relabel_histology_panels.py Analysis_Code/figure_inputs/histology_scalebar_spec.json Analysis_Code/figure_outputs/histology Analysis_Code/figure_outputs/histology
+cp Analysis_Code/figure_outputs/histology/histology_panels_EF.png Analysis_Code/figure_inputs/histology_panels_EF.png
 python Analysis_Code/supplementary_fig7_lesion_trajectories.py . Analysis_Code/figure_outputs/Supplementary_Figure_7.png
 
 Rscript Analysis_Code/restore_current_phenotype_figures.R .
@@ -43,7 +44,7 @@ RNA-seq expression is represented by 36 libraries, each prepared from a three-an
 
 RT-qPCR used aliquots of the 24 h digestive-gland RNA pools prepared for short-read RNA-seq. The source cohort supplied three three-animal pools per genotype–age group at 24 h. The table contains 350 quality-filtered target measurements under 46 stored aliquot identifiers; technical triplicates were averaged, and relative expression was calibrated to the gene-specific mean ΔCt of one-year-old GD. Figure 8 compares genotype–age RT-qPCR summaries with the 24 h RNA-seq profiles. Across eight genes, two age classes and three genotype pairs, 34 of 48 directions agree (15/16 for GD–GG, 14/16 for DD–GG and 5/16 for DD–GD). The script exports every comparison as `Figure_8_genotype_direction_comparison.csv`. Pool-level links for the individual aliquot identifiers are unavailable, so the RT-qPCR standard deviations describe variation among aliquot measurements within groups. Additional primer matches are computational predictions of sequence matches.
 
-The cardiac trace in Figure 2E is explicitly schematic and illustrates endpoint definitions; it is not an observed heart-rate recording. Histological images are preserved source panels. In the November 2026 revision their microscope scale bars were redrawn for legibility: every bar represents 100 µm, and its length is converted from the calibration of the original microscope bar in the same image (`histology_scalebar_spec.json`); only the bottom-right label box changes. Lesion arrows (`histology_arrows.json`) mark examples of disrupted tissue architecture, vacuolation or haemocyte infiltration. The image scripts use the Noto Sans font path given in the spec. Lesion-positive proportions are the number of lesion-positive animals among the five sampled per genotype–age–time–tissue group; an animal was classified as lesion-positive when any of its four sections showed a lesion. They are reported descriptively.
+The cardiac trace in Figure 2E is explicitly schematic and illustrates endpoint definitions; it is not an observed heart-rate recording. Histological images are preserved source panels. In the November 2026 revision their microscope scale bars were redrawn for legibility: every bar represents 100 µm, and its length is converted from the calibration of the original microscope bar in the same image (`histology_scalebar_spec.json`); only the bottom-right label box changes. Lesion arrows (`histology_arrows.json`) mark examples of disrupted tissue architecture, vacuolation or haemocyte infiltration visible in the fields shown; every genotype–age–tissue group in which three or more of the five animals were lesion-positive at 168 h is shown with at least one marked lesion, and Healthy fields carry none. Row and column labels are then redrawn at print size (`relabel_histology_panels.py`), which changes only the label margins. The image scripts use the Noto Sans font directory given in the spec. Lesion-positive proportions are the number of lesion-positive animals among the five sampled per genotype–age–time–tissue group; an animal was classified as lesion-positive when any of its four sections showed a lesion. They are reported descriptively.
 
 ## Raw sequencing data
 
