@@ -427,8 +427,8 @@
    ],
    "mode": "uniform",
    "value_um": 100,
-   "font_px": 44,
-   "bar_thick": 7,
+   "font_px": 86,
+   "bar_thick": 12,
    "font": "/usr/share/fonts/truetype/noto/NotoSans-Regular.ttf"
   },
   {
@@ -552,8 +552,8 @@
    ],
    "mode": "uniform",
    "value_um": 100,
-   "font_px": 44,
-   "bar_thick": 7,
+   "font_px": 86,
+   "bar_thick": 12,
    "font": "/usr/share/fonts/truetype/noto/NotoSans-Regular.ttf"
   }
  ]

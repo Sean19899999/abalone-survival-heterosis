@@ -1,9 +1,11 @@
 """Redraw the row and column labels of the histology composites at a legible print size.
 
 Figure 3E/F: column labels (Healthy, DD, GG, GD) above each block and tissue labels, rotated and in two lines,
-to the left of each block. Supplementary Figure 6A/6B: column labels ("DD, 1-year", ...) and rotated tissue labels.
-Only the label margins are cleared and redrawn; micrographs, scale bars, arrows and the panel letters E and F are
-left untouched.
+to the left of each block. Only the label margins are cleared and redrawn; micrographs, scale bars, arrows and the
+panel letters E and F are left untouched.
+Supplementary Figure 6A/6B (the DD, GG and GD fields of Figure 3E/F at twice the size): the tiles are re-laid in the
+Figure 3 grid, with margins, tile gap, labels and a panel letter (A, B) at twice the Figure 3 sizes. Tile pixels,
+scale bars and arrows are copied unchanged.
 
 usage (run from the repository root, after draw_histology_arrows.py):
   python3 relabel_histology_panels.py SCALEBAR_SPEC.json IN_DIR OUT_DIR
@@ -69,17 +71,36 @@ img.save(os.path.join(out_dir, "histology_panels_EF.png"))
 print("Figure 3E/F labels redrawn", img.size)
 
 # ---------------------------------------------------------------- Supplementary Figure 6A/6B
-for job, name, age in ((s6a_job, "SupplFig6A", "1-year"), (s6b_job, "SupplFig6B", "2-year")):
-    img = Image.open(os.path.join(in_dir, f"{name}_arrows.png")).convert("RGB")
+# The DD, GG and GD fields of Figure 3E/F at twice the size. The tiles are laid out in the Figure 3 grid, and the
+# margins, tile gap, labels and panel letter are those of Figure 3 multiplied by S = 2, so both figures read alike
+# (the scale-bar boxes and arrows are drawn at the same proportions upstream).
+S = 2
+f3t = fig3_job["tiles"]
+F3_LEFT, F3_TOP, F3_GAP, F3_END = f3t[0][0], f3t[0][1], 1, 21     # Figure 3 E-block margins and hairline gap, in px
+F3_LETTER_XY, F3_LETTER_CAP = (16, 66), 69                          # panel letter E: top-left of glyph, cap height
+for job, name, letter in ((s6a_job, "SupplFig6A", "A"), (s6b_job, "SupplFig6B", "B")):
+    src = Image.open(os.path.join(in_dir, f"{name}_arrows.png")).convert("RGB")
+    tw = min(t[2] - t[0] + 1 for t in job["tiles"]); th = min(t[3] - t[1] + 1 for t in job["tiles"])
+    left, top, gap, end = S * F3_LEFT, S * F3_TOP, S * F3_GAP, S * F3_END
+    W, H = left + 3 * tw + 2 * gap + end, top + 4 * th + 3 * gap + end
+    img = Image.new("RGB", (W, H), (255, 255, 255))
+    for i, (x0, y0, _, _) in enumerate(job["tiles"]):
+        r, c = divmod(i, 3)
+        img.paste(src.crop((x0, y0, x0 + tw, y0 + th)), (left + c * (tw + gap), top + r * (th + gap)))
     d = ImageDraw.Draw(img)
-    cols, rows = grid(job["tiles"], 4, 3)
-    top = min(r[0] for r in rows)
-    d.rectangle([cols[0][0], 0, cols[-1][1], top - 1], fill=(255, 255, 255))
-    d.rectangle([0, top, cols[0][0] - 1, img.height - 1], fill=(255, 255, 255))
-    col_font, row_font = ImageFont.truetype(REG, 62), ImageFont.truetype(REG, 60)
-    for (x0, x1), g in zip(cols, ["DD", "GG", "GD"]):
-        centred_text(d, (x0, top - 120, x1, top - 10), f"{g}, {age}", col_font)
-    for (y0, y1), tis in zip(rows, TISSUES):
-        rotated_label(img, (cols[0][0] - 60, (y0 + y1) / 2), tis, row_font, 0, 120, y1 - y0)
+    col_font, row_font = ImageFont.truetype(BOLD, S * 58), ImageFont.truetype(BOLD, S * 50)
+    for c, g in enumerate(["DD", "GG", "GD"]):
+        x0 = left + c * (tw + gap)
+        centred_text(d, (x0, 0, x0 + tw - 1, top - 1), g, col_font)
+    for r, tis in enumerate(TISSUES):
+        y0 = top + r * (th + gap)
+        rotated_label(img, (left / 2, y0 + th / 2), tis.replace(" ", "\n"), row_font, S * 4, left, th)
+    # panel letter, regular weight, sized to twice the cap height of the Figure 3 letters
+    size = S * 100
+    for _ in range(20):
+        f = ImageFont.truetype(REG, size); b = d.textbbox((0, 0), letter, font=f)
+        size = round(size * S * F3_LETTER_CAP / (b[3] - b[1]))
+    f = ImageFont.truetype(REG, size); b = d.textbbox((0, 0), letter, font=f)
+    d.text((S * F3_LETTER_XY[0] - b[0], S * F3_LETTER_XY[1] - b[1]), letter, fill=(0, 0, 0), font=f)
     img.save(os.path.join(out_dir, f"{name}.png"))
-    print(name, "labels redrawn", img.size)
+    print(name, "laid out in the Figure 3 grid", img.size, "tile", (tw, th))

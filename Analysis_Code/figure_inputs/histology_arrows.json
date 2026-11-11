@@ -1,9 +1,9 @@
 {
- "status": "2026-11-10: arrows 1, 2, 5-8, 10-12 and 15 of histology_arrows_draft.json confirmed by the author. 2026-11-11: arrows 16-22 added and confirmed by the author; arrow and label sizes enlarged.",
+ "status": "2026-11-10: arrows 1, 2, 5-8, 10-12 and 15 of histology_arrows_draft.json confirmed by the author. 2026-11-11: arrows 16-22 added and confirmed by the author; arrow and label sizes enlarged; arrow 22 moved to an unlined vacuole at the author's request, and Supplementary Figure 6 arrows set to the Figure 3 proportions.",
  "rule": "Arrows mark examples of lesions visible in the displayed field; Healthy fields carry none. The marked fields agree with the recorded 168 h lesion-positive proportions: every genotype-age-tissue group in which at least three of five animals were lesion-positive is shown with at least one marked lesion.",
  "coords": "tip position as fractions of the Supplementary Figure 6 tile (x from left, y from top); the same field appears in Figure 3E/F at half size",
  "s6_tile_index": "row * 3 + column; rows = foot muscle, digestive gland, gill, mantle; columns = DD, GG, GD",
- "style": {"fig3_len_frac": 0.20, "s6_len_frac": 0.14, "fig3_outline": 3, "s6_outline": 4},
+ "style": {"fig3_len_frac": 0.20, "s6_len_frac": 0.20, "fig3_outline": 3, "s6_outline": 6},
  "arrows": [
   {"id": 1, "age": "1-year", "tissue": "Digestive gland", "genotype": "DD", "s6_tile": 3, "tip": [0.27, 0.13], "feature": "irregular clear clefts within and between tubules (epithelial disruption)"},
   {"id": 2, "age": "1-year", "tissue": "Digestive gland", "genotype": "DD", "s6_tile": 3, "tip": [0.66, 0.36], "feature": "irregular clear clefts within and between tubules (epithelial disruption)"},
@@ -21,6 +21,6 @@
   {"id": 19, "age": "1-year", "tissue": "Digestive gland", "genotype": "GG", "s6_tile": 4, "tip": [0.24, 0.60], "feature": "large interstitial aggregate of dark-staining cells (possible haemocyte infiltration; smaller aggregates also occur in Healthy)", "proportion_168h": 1.0},
   {"id": 20, "age": "1-year", "tissue": "Digestive gland", "genotype": "GD", "s6_tile": 5, "tip": [0.555, 0.56], "feature": "clear band separating adjacent tubules (widened interstitial space)", "proportion_168h": 0.6},
   {"id": 21, "age": "2-year", "tissue": "Digestive gland", "genotype": "GG", "s6_tile": 4, "tip": [0.70, 0.71], "feature": "extensive aggregate of dark-staining cells along a septum (possible haemocyte infiltration)", "proportion_168h": 1.0},
-  {"id": 22, "age": "2-year", "tissue": "Mantle", "genotype": "DD", "s6_tile": 9, "tip": [0.285, 0.655], "feature": "rounded clear spaces in connective tissue (vacuolation)", "proportion_168h": 0.8}
+  {"id": 22, "age": "2-year", "tissue": "Mantle", "genotype": "DD", "s6_tile": 9, "tip": [0.87, 0.365], "feature": "elongated clear space without a lining in connective tissue (vacuolation); the walled oval at upper left is not marked because its continuous cellular wall suggests a haemolymph sinus", "proportion_168h": 0.8}
  ]
 }
